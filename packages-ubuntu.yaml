@@ -1,5 +1,5 @@
 ubuntu_packages:
-  # TODO move extras to sooner since common packages may have some restricted ones
+  # TODO move extras to sooner since common packages may have some restricted ones 
   - ubuntu-restricted-extras
   - openjdk-11-jdk
   - nfs-common
@@ -13,3 +13,17 @@ ubuntu_packages:
   - libreoffice-sdbc-hsqldb
   # TODO when Ubunutu gets with the times use podman instead of docker
   - docker
+  - webcamoid  
+  - keepass2
+  - libdvdnav4
+  - libdvdread4
+  # Not synced up with fedora
+  - libdvd-pkg
+  - build-essential
+  - libc6-dev 
+  - libssl-dev
+  - libexpat1-dev 
+  - libavcodec-dev 
+  - libgl1-mesa-dev 
+  - libqt4-dev 
+  - zlib1g-dev

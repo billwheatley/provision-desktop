@@ -9,7 +9,7 @@
     dnf:
       name: "*"
       state: latest
-  - name: Ensure Google Chrome Repo Exists
+  - name: Ensure Google Chrome is Enabled
     yum_repository:
       name: google-chrome
       description: Google Chrome
@@ -17,7 +17,15 @@
       enabled: yes
       gpgcheck: yes
       gpgkey: https://dl.google.com/linux/linux_signing_key.pub
-  - name: Ensure rpmfusion repos are enabled
+  - name: Ensure MS Visual Studio Code Repo is Enabled
+    yum_repository:
+      name: microsoft-vs-code
+      description: Microsoft Visual Studio Code
+      baseurl: https://packages.microsoft.com/yumrepos/vscode
+      enabled: yes
+      gpgcheck: yes
+      gpgkey: https://packages.microsoft.com/keys/microsoft.asc
+  - name: Ensure Fedora rpmfusion repos are Enabled
     dnf:
       state: present
       name:

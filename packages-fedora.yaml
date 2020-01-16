@@ -8,3 +8,6 @@ fedora_packages:
   - fuse-exfat
   #- libreoffice-sdbc-hsqldb
   - podman
+  - libdvdnav
+  - libdvdread
+  - keepass
