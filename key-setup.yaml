@@ -9,6 +9,11 @@
   connection: local
   become: "{{ localhost_user }}"
   tasks:
+  - name: Ensure ssh directory exist
+    file:
+      path: "{{ ansible_user_dir }}/.ssh"
+      state: directory
+      mode: '0700'
   - name: Ensure user account has ssh key pair generated
     openssh_keypair:
       path: "{{ ansible_user_dir }}/.ssh/id_rsa"
