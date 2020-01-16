@@ -1,10 +1,13 @@
 # provision-desktop Ansible playbooks
 
-What I use to Provision my personal Desktops with Ansible. The goal is to create a playbooks (and related roles in other repos) to quickly provision both dnf, and apt based systems for my desktop general usage.
+What I use to Provision my personal Desktops with Ansible. The goal is to create a playbooks (and related roles in other repos) to quickly provision both dnf, and apt based systems for my desktop general usage.  This is not meant to be a highly generic set of playbooks that should work on anyone's hardware and OS, its more for me and for others to get a starting place on their fork.
 
 ## Current State NOTICE
 
 This is a bit messy right now, use with caution.
+
+* dnf is tested and target to Fedora 31
+* apt is tested and target to Pop 19.10
 
 ## Bootstrap
 

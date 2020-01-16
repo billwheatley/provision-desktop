@@ -30,6 +30,7 @@
       update_cache: yes
       name: "{{ ubuntu_packages }}"
       state: latest
+  # TODO when Ubunutu gets with the times use podman instead of docker
   - name: Ensure docker group exists
     group:
       name: docker

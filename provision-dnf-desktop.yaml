@@ -1,0 +1,33 @@
+- name: Provision dnf Desktop
+  hosts: desktop
+  connection: local
+  vars_files:
+    - packages-common.yaml
+    - packages-fedora.yaml
+  tasks:
+  - name: Upgrade all packages to the latest version
+    dnf:
+      name: "*"
+      state: latest
+  - name: Ensure Google Chrome Repo Exists
+    yum_repository:
+      name: google-chrome
+      description: Google Chrome
+      baseurl: http://dl.google.com/linux/chrome/rpm/stable/x86_64
+      enabled: yes
+      gpgcheck: yes
+      gpgkey: https://dl.google.com/linux/linux_signing_key.pub
+  - name: Install Common packages
+    dnf:
+      name: "{{ common_packages }}"
+      state: latest
+  - name: Install Fedora packages
+    dnf:
+      update_cache: yes
+      name: "{{ fedora_packages }}"
+      state: latest
+  - include: provision-common-desktop-tasks.yaml
+  # TODO this role needs work - mainly accepting EULA
+  #roles:
+  #  - make-mkv
+  
