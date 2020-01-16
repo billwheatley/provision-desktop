@@ -7,7 +7,8 @@ mkdir ../desktop-roles
 
 #TODO cd into git dir
 #Call key setup playbook
-sudo ansible-playbook key-setup.yaml --extra-vars='localhost_user="${USER}"'
+LOCAL_USER=${USER}
+sudo ansible-playbook key-setup.yaml --extra-vars='localhost_user="${LOCAL_USER}"'
 
 # This is not working on nas
 # ssh-copy-id -i ~/.ssh/id_rsa.pub bwheatley@nas.local
