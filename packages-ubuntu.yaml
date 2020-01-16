@@ -1,4 +1,5 @@
 ubuntu_packages:
+  # TODO move extras to sooner since common packages may have some restricted ones
   - ubuntu-restricted-extras
   - openjdk-11-jdk
   - nfs-common
