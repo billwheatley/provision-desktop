@@ -1,0 +1,5 @@
+- name: Ensure the target Users Groups are correct
+  user:
+    name: "{{ for_user }}"
+    groups: libvirt
+    append: yes

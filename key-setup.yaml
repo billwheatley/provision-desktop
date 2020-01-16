@@ -1,0 +1,14 @@
+### Required var:
+#   - localhost_user
+
+# Run as local user you want to provision
+
+### Setup SSH Keys
+- name: Local Key Setup
+  hosts: localhost
+  connection: local
+  become: "{{ localhost_user }}"
+  tasks:
+  - name: Ensure user account has ssh key pair generated
+    openssh_keypair:
+      path: "{{ ansible_user_dir }}/.ssh/id_rsa"

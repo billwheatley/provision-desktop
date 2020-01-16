@@ -1,0 +1,31 @@
+common_packages:
+  - gimp
+  - x264
+  - x265
+  - vlc
+  - google-chrome-stable
+  - ffmpeg
+  - handbrake
+  - code
+  - libdvdnav4
+  - libdvdread4
+  - libdvd-pkg
+  - keepass2
+  - libreoffice
+  - darktable
+  - python3-pip
+  - maven
+  - git
+  - autofs
+  - build-essential 
+  - pkg-config 
+  - libc6-dev 
+  - libssl-dev
+  - libexpat1-dev 
+  - libavcodec-dev 
+  - libgl1-mesa-dev 
+  - libqt4-dev 
+  - zlib1g-dev
+  - webcamoid
+  
+

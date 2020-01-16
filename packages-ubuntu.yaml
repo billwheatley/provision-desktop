@@ -1,0 +1,15 @@
+ubuntu_packages:
+  - ubuntu-restricted-extras
+  - openjdk-11-jdk
+  - nfs-common
+  - cifs-utils
+  - vim-gtk3
+  - network-manager-openconnect
+  - network-manager-openconnect-gnome
+  - virt-manager
+  - qemu-kvm 
+  - virtinst
+  - exfat-fuse
+  - exfat-utils
+  - libreoffice-sdbc-hsqldb
+  - docker
