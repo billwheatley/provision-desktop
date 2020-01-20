@@ -17,4 +17,5 @@ common_packages:
   - bolt
   - cifs-utils
   - virt-manager
+  - fwupd
 
