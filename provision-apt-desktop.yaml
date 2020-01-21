@@ -40,6 +40,10 @@
       name: "{{ for_user }}"
       groups: docker
       append: yes
+  - name: Ensure the msr module is present
+    modprobe:
+      name: msr
+      state: present
   - include: provision-common-desktop-tasks.yaml
   # TODO this role needs work - mainly accepting EULA
   #roles:

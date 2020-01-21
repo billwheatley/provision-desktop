@@ -18,4 +18,5 @@ common_packages:
   - cifs-utils
   - virt-manager
   - fwupd
+  - powertop
 

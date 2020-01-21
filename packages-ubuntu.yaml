@@ -27,3 +27,5 @@ ubuntu_packages:
   - libgl1-mesa-dev 
   - libqt4-dev 
   - zlib1g-dev
+  - linux-tools-common
+  - linux-tools-generic
