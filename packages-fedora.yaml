@@ -11,5 +11,6 @@ fedora_packages:
   - libdvdnav
   - libdvdread
   - keepass
+  - skopeo
   #KDE Specific
   - kaccounts-providers
