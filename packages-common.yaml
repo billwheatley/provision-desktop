@@ -19,4 +19,5 @@ common_packages:
   - virt-manager
   - fwupd
   - powertop
+  - snapd
 
