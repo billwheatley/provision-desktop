@@ -3,3 +3,6 @@
     name: "{{ for_user }}"
     groups: libvirt
     append: yes
+- name: Ensure Snaps are installed
+  snap:
+    name: "{{ snap_packages }}"

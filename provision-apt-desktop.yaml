@@ -4,6 +4,7 @@
   vars_files:
     - packages-common.yaml
     - packages-ubuntu.yaml
+    - packages-snaps.yaml
   tasks:
   - name: Upgrade all packages to the latest version
     apt:
