@@ -6,3 +6,7 @@
 - name: Ensure Snaps are installed
   snap:
     name: "{{ snap_packages }}"
+- name: Ensure classic Snaps are installed
+  snap:
+    name: "{{ snap_classic_packages }}"
+    classic: yes

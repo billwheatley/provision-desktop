@@ -1,2 +1,5 @@
 snap_packages:
   - postman
+
+snap_classic_packages:
+  - skype
