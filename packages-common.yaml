@@ -20,4 +20,6 @@ common_packages:
   - fwupd
   - powertop
   - snapd
+  - jq
+  
 
