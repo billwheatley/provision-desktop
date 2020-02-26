@@ -21,5 +21,6 @@ common_packages:
   - powertop
   - snapd
   - jq
+  - poppler-utils
   
 
