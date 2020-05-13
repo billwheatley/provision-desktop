@@ -16,3 +16,5 @@ fedora_packages:
   - kaccounts-providers
   #Not In Ubuntu
   - ant
+  #Could be in Ubuntu if custom repo is installed, see https://obsproject.com/wiki/install-instructions#linux
+  - obs-studio

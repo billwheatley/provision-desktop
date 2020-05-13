@@ -22,5 +22,5 @@ common_packages:
   - snapd
   - jq
   - poppler-utils
-  
+  - siege  
 
