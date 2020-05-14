@@ -42,7 +42,7 @@ Do the following as your main admin/sudo user (do not sudo the call, that is don
 
 or
 
-`.provision-dnf-localhost-no-pkg-update.sh` if you don't want to skip package updates
+`./provision-dnf-localhost-no-pkg-update.sh` if you don't want to skip package updates
 
 ### apt running
 
@@ -50,4 +50,4 @@ or
 
 or
 
-`.provision-apt-localhost-no-pkg-update.sh` if you don't want to skip package updates
+`./provision-apt-localhost-no-pkg-update.sh` if you don't want to skip package updates
