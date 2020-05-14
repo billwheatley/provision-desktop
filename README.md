@@ -6,8 +6,8 @@ What I use to Provision my personal Desktops with Ansible. The goal is to create
 
 This is a bit messy right now, use with caution.
 
-* dnf is tested and target to Fedora 31
-* apt is tested and target to Pop 19.10
+* dnf is tested and target to Fedora 32
+* apt is tested and target to Pop 20.04 LTS
 
 ## Bootstrap
 
