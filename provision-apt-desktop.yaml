@@ -11,6 +11,8 @@
       name: "*"
       state: latest
       force_apt_get: yes
+    tags:
+      - pkg_update
   - name: Add Google Apt Signing Key
     apt_key:
       url: https://dl.google.com/linux/linux_signing_key.pub

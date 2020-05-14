@@ -10,6 +10,8 @@
     dnf:
       name: "*"
       state: latest
+    tags:
+      - pkg_update
   - name: Ensure Google Chrome is Enabled
     yum_repository:
       name: google-chrome
