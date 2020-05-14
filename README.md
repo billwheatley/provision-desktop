@@ -38,8 +38,16 @@ Do the following as your main admin/sudo user (do not sudo the call, that is don
 
 ### dnf running
 
-TODO
+`./provision-dnf-localhost.sh`
+
+or
+
+`.provision-dnf-localhost-no-pkg-update.sh` if you don't want to skip package updates
 
 ### apt running
 
 `./provision-apt-localhost.sh`
+
+or
+
+`.provision-apt-localhost-no-pkg-update.sh` if you don't want to skip package updates
