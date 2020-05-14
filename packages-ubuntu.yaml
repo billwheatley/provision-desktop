@@ -25,7 +25,7 @@ ubuntu_packages:
   - libexpat1-dev 
   - libavcodec-dev 
   - libgl1-mesa-dev 
-  - libqt4-dev 
+ # - libqt4-dev (TODO not in 20.04 anymore, messes up make-mkv)
   - zlib1g-dev
   - linux-tools-common
   - linux-tools-generic
