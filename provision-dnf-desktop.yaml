@@ -28,13 +28,13 @@
       enabled: yes
       gpgcheck: yes
       gpgkey: https://packages.microsoft.com/keys/microsoft.asc
-  - name: Ensure Fedora rpmfusion repos are Enabled
+  - name: Ensure Other Extra Fedora Repos are Enabled
     dnf:
       state: present
       name:
         - "http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ fedora_version }}.noarch.rpm"
         - "http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ fedora_version }}.noarch.rpm"
-  - name: Install Common packages
+  - name: Ensure Common packages are Installed
     dnf:
       name: "{{ common_packages }}"
       state: latest
@@ -45,7 +45,7 @@
       owner: root
       group: root
       state: link
-  - name: Install Fedora packages
+  - name: Ensure Fedora Specific Packages are Installed
     dnf:
       update_cache: yes
       name: "{{ fedora_packages }}"

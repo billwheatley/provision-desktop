@@ -18,3 +18,7 @@ fedora_packages:
   - ant
   #Could be in Ubuntu if custom repo is installed, see https://obsproject.com/wiki/install-instructions#linux
   - obs-studio
+  # For Zoom rpm TODO, refactor to role
+  - ibus
+  - ibus-m17n
+  

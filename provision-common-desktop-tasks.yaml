@@ -10,3 +10,8 @@
   snap:
     name: "{{ snap_classic_packages }}"
     classic: yes
+- name: Ensure Thinkfan is started and enabled
+  systemd:
+    name: thinkfan
+    enabled: yes
+    state: started
