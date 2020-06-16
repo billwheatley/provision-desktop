@@ -1,5 +1,5 @@
 fedora_packages:
-  - java-11-openjdk
+  - java-latest-openjdk
   - nfs-utils
   - vim-X11
   - openconnect
