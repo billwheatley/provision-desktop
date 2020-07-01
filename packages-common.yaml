@@ -23,5 +23,6 @@ common_packages:
   - jq
   - poppler-utils
   - siege
-  - thinkfan
+  - obs-studio
+  
 

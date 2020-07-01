@@ -16,9 +16,9 @@ fedora_packages:
   - kaccounts-providers
   #Not In Ubuntu
   - ant
-  #Could be in Ubuntu if custom repo is installed, see https://obsproject.com/wiki/install-instructions#linux
-  - obs-studio
   # For Zoom rpm TODO, refactor to role
   - ibus
   - ibus-m17n
+  # Temp place as "fedora" has been tightly coupled to the T590, TODO refactor HW Specific stuff packages out of general desktop packages
+  - thinkfan
   

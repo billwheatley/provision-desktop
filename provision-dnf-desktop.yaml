@@ -50,6 +50,12 @@
       update_cache: yes
       name: "{{ fedora_packages }}"
       state: latest
+  # TODO need to break apart generic dnf/fedora packages to HW specific packages
+  - name: Ensure Thinkfan is started and enabled
+    systemd:
+      name: thinkfan
+      enabled: yes
+      state: started
   - include: provision-common-desktop-tasks.yaml
   # TODO this role needs work - mainly accepting EULA
   #roles:
