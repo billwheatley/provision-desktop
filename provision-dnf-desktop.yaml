@@ -57,7 +57,9 @@
       enabled: yes
       state: started
   - include: provision-common-desktop-tasks.yaml
+  roles:
+     - role: gantsign.golang
+       golang_gopath: '$HOME/dev/go-workspace'
   # TODO this role needs work - mainly accepting EULA
-  #roles:
   #  - make-mkv
   
