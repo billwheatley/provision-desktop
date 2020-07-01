@@ -20,7 +20,7 @@
       enabled: yes
       gpgcheck: yes
       gpgkey: https://dl.google.com/linux/linux_signing_key.pub
-  - name: Ensure MS Visual Studio Code Repo is Enabled
+  - name: Ensure MS Visual Studio Code Repo is Configured
     yum_repository:
       name: microsoft-vs-code
       description: Microsoft Visual Studio Code
