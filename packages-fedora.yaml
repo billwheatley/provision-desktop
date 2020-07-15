@@ -1,5 +1,6 @@
 fedora_packages:
   - java-latest-openjdk
+  - java-latest-openjdk-headless
   - nfs-utils
   - vim-X11
   - openconnect
