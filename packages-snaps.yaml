@@ -1,6 +1,7 @@
 snap_packages:
   - postman
   - yq
+  - drawio
 
 snap_classic_packages:
   - skype
