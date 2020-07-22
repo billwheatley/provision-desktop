@@ -1,0 +1,17 @@
+# Extra Repos for YUM and DNF systems - Agnostic of specific Red Hat variant
+- name: Ensure Google Chrome is Enabled
+  yum_repository:
+    name: google-chrome
+    description: Google Chrome
+    baseurl: http://dl.google.com/linux/chrome/rpm/stable/x86_64
+    enabled: yes
+    gpgcheck: yes
+    gpgkey: https://dl.google.com/linux/linux_signing_key.pub
+- name: Ensure MS Visual Studio Code Repo is Configured
+  yum_repository:
+    name: microsoft-vs-code
+    description: Microsoft Visual Studio Code
+    baseurl: https://packages.microsoft.com/yumrepos/vscode
+    enabled: yes
+    gpgcheck: yes
+    gpgkey: https://packages.microsoft.com/keys/microsoft.asc

@@ -1,25 +1,28 @@
-fedora_packages:
+# Generic package listing for any Red Hat like distro ie: (RHEL, Fedora, Centos)
+rh_packages:
   - java-latest-openjdk
   - java-latest-openjdk-headless
   - nfs-utils
   - vim-X11
   - openconnect
-  - NetworkManager-openconnect-gnome
   - qemu
   - fuse-exfat
-  #- libreoffice-sdbc-hsqldb
   - podman
   - libdvdnav
   - libdvdread
   - keepass
   - skopeo
-  #KDE Specific
-  - kaccounts-providers
   #Not In Ubuntu
   - ant
   # For Zoom rpm TODO, refactor to role
   - ibus
   - ibus-m17n
   # Temp place as "fedora" has been tightly coupled to the T590, TODO refactor HW Specific stuff packages out of general desktop packages
-  - thinkfan
+  #- thinkfan
+
+rh_gnome_packages:
+  - NetworkManager-openconnect-gnomes
+
+rh_kde_packages:
+  - kaccounts-providers
   

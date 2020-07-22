@@ -4,9 +4,7 @@ What I use to Provision my personal Desktops with Ansible. The goal is to create
 
 ## Current State NOTICE
 
-This is a bit messy right now, use with caution.
-
-* dnf is tested and target to Fedora 32
+* dnf/fedora is tested and target to Fedora 32
 * apt is tested and target to Pop 20.04 LTS
 
 ## Bootstrap
@@ -26,23 +24,25 @@ From a fresh OS install, do the following as your main admin/sudo user (do not s
 
 `curl -s https://raw.githubusercontent.com/billwheatley/provision-desktop/master/bootstrap-dnf.sh | bash`
 
+### yum bootstrap
+
+`curl -s https://raw.githubusercontent.com/billwheatley/provision-desktop/master/bootstrap-yum.sh | bash`
+
 ### apt bootstrap
 
 `curl -s https://raw.githubusercontent.com/billwheatley/provision-desktop/master/bootstrap-apt.sh | bash`
 
 ## Running
 
-On a regular basis (every time you make a change or just need to get the system back in order or up to speed).
-
 Do the following as your main admin/sudo user (do not sudo the call, that is done in the script):
 
-### dnf running
+### fedora running
 
-`./provision-dnf-localhost.sh`
+`./provision-fedora-localhost.sh`
 
 or
 
-`./provision-dnf-localhost-no-pkg-update.sh` if you don't want to skip package updates
+`./provision-fedora-localhost-no-pkg-update.sh` if you don't want to skip package updates
 
 ### apt running
 
