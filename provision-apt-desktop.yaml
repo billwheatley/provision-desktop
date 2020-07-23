@@ -46,6 +46,6 @@
     modprobe:
       name: msr
       state: present
-  - include: provision-common-desktop-tasks.yaml
+  - include: tasks/provision-common-desktop-tasks.yaml
 - import_playbook: provision-common-desktop-roles.yaml
   

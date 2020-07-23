@@ -11,7 +11,7 @@
       state: latest
     tags:
       - pkg_update
-  - include: provision-common-yum-repos.yaml
+  - include: tasks/provision-common-yum-repos.yaml
   - name: Ensure Other Extra Fedora Repos are Enabled
     dnf:
       state: present
@@ -45,6 +45,6 @@
   #    name: thinkfan
   #    enabled: yes
   #    state: started
-  - include: provision-common-desktop-tasks.yaml
+  - include: tasks/provision-common-desktop-tasks.yaml
 - import_playbook: provision-common-desktop-roles.yaml
   
