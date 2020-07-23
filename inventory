@@ -1,5 +1,5 @@
 [desktop]
-localhost
+localhost ansible_connection=local 
 
 [nas]
 nas.local

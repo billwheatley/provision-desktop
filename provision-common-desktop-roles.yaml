@@ -1,6 +1,5 @@
 - name: Provision Common Roles
   hosts: desktop
-  connection: local
   vars_files:
     - vs-code-extensions.yaml
   roles:

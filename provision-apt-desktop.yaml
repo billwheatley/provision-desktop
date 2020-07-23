@@ -1,6 +1,5 @@
 - name: Provision apt Desktop
   hosts: desktop
-  connection: local
   vars_files:
     - packages-common.yaml
     - packages-ubuntu.yaml

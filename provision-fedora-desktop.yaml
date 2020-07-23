@@ -1,6 +1,5 @@
 - name: Provision dnf Desktop
   hosts: desktop
-  connection: local
   vars_files:
     - packages-common.yaml
     - packages-rh.yaml
