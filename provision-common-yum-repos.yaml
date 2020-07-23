@@ -7,11 +7,13 @@
     enabled: yes
     gpgcheck: yes
     gpgkey: https://dl.google.com/linux/linux_signing_key.pub
-- name: Ensure MS Visual Studio Code Repo is Configured
-  yum_repository:
-    name: microsoft-vs-code
-    description: Microsoft Visual Studio Code
-    baseurl: https://packages.microsoft.com/yumrepos/vscode
-    enabled: yes
-    gpgcheck: yes
-    gpgkey: https://packages.microsoft.com/keys/microsoft.asc
+    
+# I think the vs-code role will take care of this now, need to test before removal
+#- name: Ensure MS Visual Studio Code Repo is Configured
+#  yum_repository:
+#    name: microsoft-vs-code
+#    description: Microsoft Visual Studio Code
+#    baseurl: https://packages.microsoft.com/yumrepos/vscode
+#    enabled: yes
+#    gpgcheck: yes
+#    gpgkey: https://packages.microsoft.com/keys/microsoft.asc

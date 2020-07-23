@@ -6,7 +6,6 @@ common_packages:
   - google-chrome-stable
   - ffmpeg
   - handbrake
-  - code
   - libreoffice
   - darktable
   - python3-pip
