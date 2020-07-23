@@ -1,9 +1,9 @@
 - name: Provision apt Desktop
   hosts: desktop
   vars_files:
-    - packages-common.yaml
-    - packages-ubuntu.yaml
-    - packages-snaps.yaml
+    - vars/packages-common.yaml
+    - vars/packages-ubuntu.yaml
+    - vars/packages-snaps.yaml
   tasks:
   - name: Upgrade all packages to the latest version
     apt:

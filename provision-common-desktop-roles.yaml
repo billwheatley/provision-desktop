@@ -1,7 +1,7 @@
 - name: Provision Common Roles
   hosts: desktop
   vars_files:
-    - vs-code-extensions.yaml
+    - vars/vs-code-extensions.yaml
   roles:
     - role: gantsign.golang
       golang_gopath: '$HOME/dev/go-workspace'

@@ -1,9 +1,9 @@
 - name: Provision dnf Desktop
   hosts: desktop
   vars_files:
-    - packages-common.yaml
-    - packages-rh.yaml
-    - packages-snaps.yaml
+    - vars/packages-common.yaml
+    - vars/packages-rh.yaml
+    - vars/packages-snaps.yaml
   tasks:
   - name: Upgrade all packages to the latest version
     dnf:
