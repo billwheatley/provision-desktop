@@ -1,0 +1,17 @@
+- name: Provision Common Roles
+  hosts: desktop
+  connection: local
+  vars_files:
+    - vs-code-extensions.yaml
+  roles:
+    - role: gantsign.golang
+      golang_gopath: '$HOME/dev/go-workspace'
+
+    # GITHUB is here: https://github.com/gantsign/ansible-role-visual-studio-code
+    - role: gantsign.visual-studio-code
+      users:
+        - username: "{{ for_user }}"
+          visual_studio_code_extensions: "{{ vs_code_extensions }}"
+
+    # TODO this role needs work - mainly accepting EULA
+    #  - role: make-mkv

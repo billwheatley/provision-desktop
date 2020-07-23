@@ -27,12 +27,12 @@
     apt:
       update_cache: yes
       name: "{{ common_packages }}"
-      state: latest
+      state: present
   - name: Install Ubuntu packages
     apt:
       update_cache: yes
       name: "{{ ubuntu_packages }}"
-      state: latest
+      state: present
   # TODO when Ubunutu gets with the times use podman instead of docker
   - name: Ensure docker group exists
     group:
@@ -48,9 +48,5 @@
       name: msr
       state: present
   - include: provision-common-desktop-tasks.yaml
-  roles:
-    - role: gantsign.golang
-      golang_gopath: '$HOME/dev/go-workspace'
- # TODO this role needs work - mainly accepting EULA
- #  - make-mkv
+- import_playbook: provision-common-desktop-roles.yaml
   

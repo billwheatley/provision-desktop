@@ -1,0 +1,17 @@
+# To get a list of currently installed extensions (to update/make this list): $> code --list-extensions
+vs_code_extensions:
+  - DavidAnson.vscode-markdownlint
+  - dgileadi.java-decompiler
+  - golang.go
+  - ms-azuretools.vscode-docker
+  - ms-python.python
+  - redhat.java
+  - redhat.vscode-xml
+  - streetsidesoftware.code-spell-checker
+  - VisualStudioExptTeam.vscodeintellicode
+  - vscjava.vscode-java-debug
+  - vscjava.vscode-java-dependency
+  - vscjava.vscode-java-pack
+  - vscjava.vscode-java-test
+  - vscjava.vscode-maven
+    
