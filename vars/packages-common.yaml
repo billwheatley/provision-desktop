@@ -23,5 +23,5 @@ common_packages:
   - poppler-utils
   - siege
   - obs-studio
-  
+  - tree
 
