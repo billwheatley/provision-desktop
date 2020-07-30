@@ -24,4 +24,5 @@ common_packages:
   - siege
   - obs-studio
   - tree
+  - libguestfs-tools
 
