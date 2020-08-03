@@ -5,7 +5,6 @@ What I use to Provision my personal Desktops with Ansible. The goal is to create
 ## Current State NOTICE
 
 * dnf/fedora is tested and target to Fedora 32, from fresh install
-* yum/rhel targeted to RHEL 8, fresh install + subscriptions activated (future)
 * apt is tested and target to Pop 20.04 LTS, from fresh install
 
 ## Bootstrap
@@ -24,10 +23,6 @@ From the prescribed starting point in "Current State NOTICE), do the following a
 ### dnf bootstrap
 
 `curl -s https://raw.githubusercontent.com/billwheatley/provision-desktop/master/bootstrap-dnf.sh | bash`
-
-### yum bootstrap
-
-`curl -s https://raw.githubusercontent.com/billwheatley/provision-desktop/master/bootstrap-yum.sh | bash`
 
 ### apt bootstrap
 

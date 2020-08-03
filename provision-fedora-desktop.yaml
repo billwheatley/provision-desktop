@@ -39,6 +39,16 @@
       update_cache: yes
       name: "{{ rh_kde_packages }}"
       state: present
+  - name: Finding Local rpms
+    find:
+      paths: "{{ package_dir }}"
+      patterns: "*.rpm"
+    register: local_rpm_results
+  - name: Ensure Local RPM Packages are Installed
+    yum:
+      name: "{{ item.path }}"
+      state: present
+    with_items: "{{ local_rpm_results.files }}"
   # TODO need to break apart generic dnf/fedora packages to HW specific packages and roles
   #- name: Ensure Thinkfan is started and enabled
   #  systemd:
