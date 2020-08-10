@@ -1,4 +1,5 @@
-# To get a list of currently installed extensions (to update/make this list): $> code --list-extensions
+# To get a list of currently installed extensions (to update/make this list): 
+# $> code --list-extensions | sed -e 's/^/  - /g'
 vs_code_extensions:
   - DavidAnson.vscode-markdownlint
   - dgileadi.java-decompiler
@@ -14,4 +15,3 @@ vs_code_extensions:
   - vscjava.vscode-java-pack
   - vscjava.vscode-java-test
   - vscjava.vscode-maven
-    
