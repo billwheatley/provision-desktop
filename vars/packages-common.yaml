@@ -26,4 +26,5 @@ common_packages:
   - tree
   - libguestfs-tools
   - v4l-utils
+  - putty
 
