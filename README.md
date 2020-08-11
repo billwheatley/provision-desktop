@@ -28,6 +28,22 @@ From the prescribed starting point in "Current State NOTICE), do the following a
 
 `curl -s https://raw.githubusercontent.com/billwheatley/provision-desktop/master/bootstrap-apt.sh | bash`
 
+## Packages not in Repositories
+
+Sometimes we have those random `rpms` and `debs` that are not in public repos most because of distribution restrictions. Short of private repos, an easy solution is maintaining a local directory of these is just to drop these into a folder and this will pick up and install them. These will be installed after the repo packages are installed.
+
+### Fedora
+
+Place your `rpms` in `$HOME/rpms/`
+
+If you have dependent `rpms` that is fine, these will be installed in a single command and `rpm` will figure that out.
+
+This directory is not required if you have no `rpms` outside a repo.
+
+### Pop / Ubuntu
+
+*Coming soon*
+
 ## Running
 
 Do the following as your main admin/sudo user (do not sudo the call, that is done in the script):

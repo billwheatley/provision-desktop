@@ -44,11 +44,13 @@
       paths: "{{ package_dir }}"
       patterns: "*.rpm"
     register: local_rpm_results
-  - name: Ensure Local RPM Packages are Installed
+  - name: Prepare Local rpm List
+    set_fact:
+      rpm_paths: "{{ local_rpm_results.files | map(attribute='path') | list}}"
+  - name: Ensure Local rpm Packages are Installed
     yum:
-      name: "{{ item.path }}"
+      name: "{{ rpm_paths }}"
       state: present
-    with_items: "{{ local_rpm_results.files }}"
   # TODO need to break apart generic dnf/fedora packages to HW specific packages and roles
   #- name: Ensure Thinkfan is started and enabled
   #  systemd:
