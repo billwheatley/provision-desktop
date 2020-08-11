@@ -30,7 +30,7 @@ From the prescribed starting point in "Current State NOTICE), do the following a
 
 ## Packages not in Repositories
 
-Sometimes we have those random `rpms` and `debs` that are not in public repos most because of distribution restrictions. Short of private repos, an easy solution is maintaining a local directory of these is just to drop these into a folder and this will pick up and install them. These will be installed after the repo packages are installed.
+Sometimes we have those random `rpms` and `debs` that are not in public repos most because of distribution restrictions. Short of private repos, an easy solution is maintaining a local directory of these is just to drop these into a folder and this will pick up and install them. Updating these in most cases should be easy just add the new rpm and delete the old. These will be installed after the repo packages are installed.
 
 ### Fedora
 
