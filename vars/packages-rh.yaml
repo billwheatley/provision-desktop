@@ -14,6 +14,7 @@ rh_packages:
   - skopeo
   #Not In Ubuntu
   - ant
+  - mpv
   # For Zoom rpm TODO, refactor to role
   - ibus
   - ibus-m17n
