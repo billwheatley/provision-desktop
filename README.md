@@ -1,8 +1,8 @@
 # provision-desktop Ansible playbooks
 
-What I use to Provision my personal Desktops with Ansible. The goal is to create a playbooks (and related roles in other repos) to quickly provision: dnf/fedora, yum/rhel and ubuntu/apt based systems for my desktop general usage.  This is not meant to be a highly generic set of playbooks that should work on anyone's hardware and OS, its more for me and for others to get a starting place on their fork.
+What I use to Provision my personal Desktops with Ansible. The goal is to create a playbooks (and related roles in other repos) to quickly provision: dnf/fedora and ubuntu/apt based systems for my desktop general usage.  This is not meant to be a highly generic set of playbooks that should work on anyone's hardware and OS, its more for me and for others to get a starting place on their fork.
 
-## Current State NOTICE
+## Current State
 
 * dnf/fedora is tested and target to Fedora 32, from fresh install
 * apt is tested and target to Pop 20.04 LTS, from fresh install
@@ -34,7 +34,7 @@ Sometimes we have those random `rpms` and `debs` that are not in public repos mo
 
 ### Fedora
 
-Place your `rpms` in `$HOME/rpms/`
+Place your `rpms` in `$HOME/automated-install/rpm/`
 
 If you have dependent `rpms` that is fine, these will be installed in a single command and `rpm` will figure that out.
 
@@ -54,7 +54,7 @@ Do the following as your main admin/sudo user (do not sudo the call, that is don
 
 or
 
-`./provision-fedora-localhost-no-pkg-update.sh` if you don't want to skip package updates
+`./provision-fedora-localhost-no-pkg-update.sh` if you don't want to skip dnf package updates
 
 ### apt running
 
@@ -62,4 +62,4 @@ or
 
 or
 
-`./provision-apt-localhost-no-pkg-update.sh` if you don't want to skip package updates
+`./provision-apt-localhost-no-pkg-update.sh` if you don't want to skip apt package updates
