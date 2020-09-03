@@ -18,7 +18,7 @@ Boot Strap Functions:
 
 From a directory you want to store these (ex: `~/dev/desktop-ansible/`)
 
-From the prescribed starting point in "Current State NOTICE), do the following as your main admin/sudo user (do not sudo the call, that is done in the script):
+From the prescribed starting point in the [Current State  Section](current-state), do the following as your main admin/sudo user (do not sudo the call, that is done in the script):
 
 ### dnf bootstrap
 
@@ -36,7 +36,7 @@ Sometimes we have those random `rpms` and `debs` that are not in public repos mo
 
 Place your `rpms` in `$HOME/automated-install/rpm/`
 
-If you have dependent `rpms` that is fine, these will be installed in a single command and `rpm` will figure that out.
+If you have dependent `rpms` make sure they are also in the dir, these will be installed in a single command and `rpm` will figure out the dependencies. If your dependencies are packages in repos make sure those are added to one of the package repos. Those will be run before this.
 
 This directory is not required if you have no `rpms` outside a repo.
 
@@ -46,13 +46,13 @@ This directory is not required if you have no `rpms` outside a repo.
 
 ## Misc Software in tar.gz files
 
-Sometimes we have things not even in nice clean packages and those come from tar.gz files then we need to install those, unlike rpms and debs we will need to add custom declarations to install these.  If I keep with my design principals going forward the declarations should be in roles.
+Sometimes we have things not even in nice clean packages and those come from things like `tar.gz` files then we need to install those, unlike `rpms` and `debs` we will need to add custom declarations to install these.  If I keep with my design principals going forward the declarations should be in individual roles.
 
 The following is what is currently supported
 
 ### oc (rh distros only)
 
-This is the official certified `oc` tool from Red Hat, this is behind a pay wall at <https://access.redhat.com> and is distributed as a `.tar.gz` file.  This should work with an unofficial oc install as well, the tar.gz just needs to have the `oc` binary at the root of the archive
+This is the official certified `oc` tool from Red Hat, this is behind a pay wall at <https://access.redhat.com> and is distributed as a `.tar.gz` file.  This should work with an unofficial `oc` archive (that is publicly available) as well, the tar.gz just needs to have the `oc` binary at the root of the archive
 
 Place oc tar.gz in `$HOME/automated-install/archive` once downloaded
 
