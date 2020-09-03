@@ -1,0 +1,5 @@
+- name: Provision RH Roles
+  hosts: desktop
+  roles:
+    - role: oc-role
+      oc_archive: "{{ oc_archive }}"
