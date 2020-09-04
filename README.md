@@ -50,7 +50,7 @@ Sometimes we have things not even in nice clean packages and those come from thi
 
 The following is what is currently supported
 
-### oc (rh distros only)
+### oc
 
 This is the official certified `oc` tool from Red Hat, this is behind a pay wall at <https://access.redhat.com> and is distributed as a `.tar.gz` file.  This should work with an unofficial `oc` archive (that is publicly available) as well, the tar.gz just needs to have the `oc` binary at the root of the archive
 

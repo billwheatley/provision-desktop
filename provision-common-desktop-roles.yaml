@@ -12,5 +12,5 @@
         - username: "{{ for_user }}"
           visual_studio_code_extensions: "{{ vs_code_extensions }}"
 
-    # TODO this role needs work - mainly accepting EULA
-    #  - role: make-mkv
+    - role: oc-role
+      oc_archive: "{{ oc_archive }}"

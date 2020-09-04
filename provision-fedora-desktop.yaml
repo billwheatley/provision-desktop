@@ -62,6 +62,4 @@
 # Common Roles
 - import_playbook: provision-common-desktop-roles.yaml
 
-# RH Specific Roles
-- import_playbook: provision-rh-roles.yaml
   
