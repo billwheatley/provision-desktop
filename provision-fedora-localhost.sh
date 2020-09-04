@@ -6,5 +6,5 @@ AUTOMATED_INSTALL_HOME=$HOME/automated-install
 PACKAGE_DIR=$AUTOMATED_INSTALL_HOME/rpm
 OC_ARCHIVE=$AUTOMATED_INSTALL_HOME/archive/oc.tar.gz
 
-ansible-galaxy install -r requirements.yaml
+ansible-galaxy install -f -r requirements.yaml
 sudo ansible-playbook provision-fedora-desktop.yaml -v --extra-vars="for_user=${LOCAL_USER} fedora_version=${FEDORA_VERSION} package_dir=${PACKAGE_DIR} oc_archive=${OC_ARCHIVE}"
