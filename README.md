@@ -4,7 +4,7 @@ What I use to Provision my personal Desktops with Ansible. The goal is to create
 
 ## Current State
 
-* dnf/fedora is tested and target to Fedora 32, from fresh install
+* dnf/fedora is tested and target to Fedora 32 KDE Spin, from fresh install
 * apt is tested and target to Pop 20.04 LTS, from fresh install
 
 ## Bootstrap
