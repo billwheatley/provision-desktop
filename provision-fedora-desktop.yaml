@@ -51,12 +51,6 @@
     yum:
       name: "{{ rpm_paths }}"
       state: present
-  # TODO need to break apart generic dnf/fedora packages to HW specific packages and roles
-  #- name: Ensure Thinkfan is started and enabled
-  #  systemd:
-  #    name: thinkfan
-  #    enabled: yes
-  #    state: started
   - include: tasks/provision-common-desktop-tasks.yaml
 
 # Common Roles
