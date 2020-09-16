@@ -38,11 +38,9 @@ OC_ARCHIVE=${AUTOMATED_INSTALL_HOME}/archive/oc.tar.gz
 
 # Package manager / OS specific Vars
 if [ "$PKG_MGR" == "dnf" ]; then
-    #FEDORA_VERSION=`rpm -E %fedora`
-    #PACKAGE_DIR=$AUTOMATED_INSTALL_HOME/rpm
-    OS_EXTRA_VARS="fedora_version=${rpm -E %fedora} package_dir=${AUTOMATED_INSTALL_HOME}/rpm"
-
+    OS_EXTRA_VARS="fedora_version=`rpm -E %fedora` package_dir=${AUTOMATED_INSTALL_HOME}/rpm"
     ENTRY_PLAYBOOK=provision-fedora-desktop.yaml
+    
 elif [ "$PKG_MGR" == "apt-get" ]; then
     OS_EXTRA_VARS="package_dir=${AUTOMATED_INSTALL_HOME}/deb" #<< Not currently used
     ENTRY_PLAYBOOK=provision-apt-desktop.yaml
