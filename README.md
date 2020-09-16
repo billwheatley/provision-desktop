@@ -66,18 +66,19 @@ ln -s oc-4.5.7-linux.tar.gz oc.tar.gz
 
 Do the following as your main admin/sudo user (do not sudo the call, that is done in the script):
 
-### fedora running
+```console
+./provision-localhost.sh
+```
 
-`./provision-fedora-localhost.sh`
+This script has the ability to automatically discover the following package managers and run the appropriate playbook, those are:
 
-or
+* dnf
+* apt
 
-`./provision-fedora-localhost-no-pkg-update.sh` if you don't want to skip dnf package updates
+### Optional Execution Options
 
-### apt running
+The script is designed to be run without any options however there are custom behaviors a nd you can use the `-h` option to see a current list of options:
 
-`./provision-apt-localhost.sh`
-
-or
-
-`./provision-apt-localhost-no-pkg-update.sh` if you don't want to skip apt package updates
+```console
+./provision-localhost.sh -h
+```
