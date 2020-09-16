@@ -28,4 +28,5 @@ common_packages:
   - v4l-utils
   - putty
   - wireshark
+  - vym
 
