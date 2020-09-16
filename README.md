@@ -77,7 +77,7 @@ This script has the ability to automatically discover the following package mana
 
 ### Optional Execution Options
 
-The script is designed to be run without any options however there are custom behaviors a nd you can use the `-h` option to see a current list of options:
+The script is designed to be run without any options however there are custom behaviors, you can use the `-h` option to see a current list of options:
 
 ```console
 ./provision-localhost.sh -h
