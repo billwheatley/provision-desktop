@@ -17,7 +17,7 @@ Boot Strap Functions:
 
 From a directory you want to store these (ex: `~/dev/desktop-ansible/`)
 
-From the prescribed starting point in the [Current State  Section](current-state), do the following as your main admin/sudo user (do not sudo the call, that is done in the script):
+From the prescribed starting point in the [Current State  Section](#current-state), do the following as your main admin/sudo user (do not sudo the call, that is done in the script):
 
 ### dnf bootstrap
 
