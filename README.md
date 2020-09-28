@@ -14,7 +14,6 @@ Boot Strap Functions:
 * Install Ansible and GIT
 * Get these playbooks on your machine
 * Generate ssh keys
-* Set keys up with dependent machines (future)
 
 From a directory you want to store these (ex: `~/dev/desktop-ansible/`)
 
