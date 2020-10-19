@@ -29,7 +29,7 @@ From the prescribed starting point in the [Current State  Section](#current-stat
 
 ## Packages not in Repositories
 
-Sometimes we have those random `rpms` and `debs` that are not in public repos most because of distribution restrictions. Short of private repos, an easy solution is maintaining a local directory of these is just to drop these into a folder and this will pick up and install them. Updating these in most cases should be easy just add the new rpm and delete the old. These will be installed after the repo packages are installed.
+Sometimes we have those random `rpms` and `debs` that are not in public repos most because of distribution restrictions. Short of private repos, an easy solution is maintaining a local directory of these is just to drop these into a folder and this will pick up and install them.
 
 ### Fedora
 
@@ -38,6 +38,8 @@ Place your `rpms` in `$HOME/automated-install/rpm/`
 If you have dependent `rpms` make sure they are also in the dir, these will be installed in a single command and `rpm` will figure out the dependencies. If your dependencies are packages in repos make sure those are added to one of the package repos. Those will be run before this.
 
 This directory is not required if you have no `rpms` outside a repo.
+
+Note: currently the is no automated upgrade of local rpms, see [issue #14](https://github.com/billwheatley/provision-desktop/issues/14)
 
 ### Pop / Ubuntu
 
