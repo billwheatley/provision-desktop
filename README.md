@@ -43,24 +43,6 @@ This directory is not required if you have no `rpms` outside a repo.
 
 *Coming soon*
 
-## Misc Software in tar.gz files
-
-Sometimes we have things not even in nice clean packages and those come from things like `tar.gz` files then we need to install those, unlike `rpms` and `debs` we will need to add custom declarations to install these.  If I keep with my design principals going forward the declarations should be in individual roles.
-
-The following is what is currently supported
-
-### oc (optional)
-
-This is the official certified `oc` tool from Red Hat, this is behind a pay wall at <https://access.redhat.com> and is distributed as a `.tar.gz` file.  This should work with an unofficial `oc` archive (that is publicly available) as well, the `.tar.gz` file just needs to have the `oc` binary at the root of the archive
-
-Place oc tar.gz in `$HOME/automated-install/archive` once downloaded
-
-Then create a sym link from `oc.tar.gz` to the specific version (or rename the archive if you prefer). Example:
-
-```console
-ln -s oc-4.5.7-linux.tar.gz oc.tar.gz
-```
-
 ## Running
 
 Do the following as your main admin/sudo user (do not sudo the call, that is done in the script):

@@ -13,6 +13,4 @@
           visual_studio_code_extensions: "{{ vs_code_extensions }}"
 
     - role: oc-role
-      oc_archive: "{{ oc_archive }}"
-      
     - role: argocd-cli-role
