@@ -14,3 +14,4 @@
 
     - role: oc-role
     - role: argocd-cli-role
+    - role: andrewrothstein.kustomize
