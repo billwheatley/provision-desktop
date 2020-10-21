@@ -29,4 +29,5 @@ common_packages:
   - putty
   - wireshark
   - vym
+  - npm
 
