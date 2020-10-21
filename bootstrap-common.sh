@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Make sure plain 'python' is in path (anisble does not do will without it)
+# Make sure plain 'python' is in path (ansible does not do will without it)
 if [ ! `which python` ]; then
   PYTHON3_LOC=$(which python3)
   PYTHON_LOC=$(dirname $PYTHON3_LOC)/python
