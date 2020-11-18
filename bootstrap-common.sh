@@ -11,9 +11,6 @@ fi
 # Make Roles-dir
 mkdir ../desktop-roles
 
-# Make automated install dirs
-mkdir -p $HOME/automated-install/archive
-
 #Call key setup playbook
 ansible-playbook key-setup.yaml --extra-vars='localhost_user="${USER}" ansible_user_dir="${HOME}"'
 
