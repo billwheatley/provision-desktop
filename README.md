@@ -49,11 +49,13 @@ Add your new SSH Key public key in [Github SSH Key Settings](https://github.com/
 git remote set-url origin git@github.com:billwheatley/provision-desktop.git
 ```
 
-### Set your email
+### Set your name and email
 
-Make sure GitHub associates check-ins with your account.
+* Set your name globally 
+* Configure just this repo's email address to the one associated with your GitHub account.
 
 ```console
+git config --global user.name "Bill Wheatley"
 git config user.email theGitHubEmailYouUse@someservice.com
 ```
 
