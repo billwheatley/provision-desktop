@@ -34,7 +34,6 @@ PKG_MGR=`$DIRNAME/bin/which-pkg-mgr.sh`
 
 LOCAL_USER=${USER}
 AUTOMATED_INSTALL_HOME=${HOME}/automated-install
-OC_ARCHIVE=${AUTOMATED_INSTALL_HOME}/archive/oc.tar.gz
 
 # Package manager / OS specific Vars
 if [ "$PKG_MGR" == "dnf" ]; then
@@ -57,4 +56,4 @@ if [ ! "$role_updates" == "skip" ]; then
     ansible-galaxy install -f -r requirements.yaml
 fi
 
-sudo ansible-playbook ${ENTRY_PLAYBOOK} -v --extra-vars="for_user=${LOCAL_USER} oc_archive=${OC_ARCHIVE} ${OS_EXTRA_VARS}" ${skip_tag_directive}
+sudo ansible-playbook ${ENTRY_PLAYBOOK} -v --extra-vars="for_user=${LOCAL_USER} ${OS_EXTRA_VARS}" ${skip_tag_directive}
