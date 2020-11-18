@@ -27,7 +27,37 @@ From the prescribed starting point in the [Current State  Section](#current-stat
 
 `curl -s https://raw.githubusercontent.com/billwheatley/provision-desktop/master/bootstrap-apt.sh | bash`
 
-## Packages not in Repositories
+## (Optional) Prepare Git Repo for Pushing
+
+If you plan on pushing changes from the clone of this repo created by the bootstrap there are several steps you need to remember to take.
+
+### Setup your new key in Git Hub
+
+The bootstrap created an ssh key and you will need to associate that to the Github account that has access to this repo
+
+Copy your public key:
+
+```console
+cat ~/.ssh/id_rsa.pub
+```
+
+Add your new SSH Key public key in [Github SSH Key Settings](https://github.com/settings/keys)
+
+### Change Remote Repo to an SSH type
+
+```console
+git remote set-url origin git@github.com:billwheatley/provision-desktop.git
+```
+
+### Set your email
+
+Make sure GitHub associates check-ins with your account.
+
+```console
+git config user.email theGitHubEmailYouUse@someservice.com
+```
+
+## (Optional) Packages not in Repositories
 
 Sometimes we have those random `rpms` and `debs` that are not in public repos most because of distribution restrictions. Short of private repos, an easy solution is maintaining a local directory of these is just to drop these into a folder and this will pick up and install them.
 
