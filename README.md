@@ -41,9 +41,7 @@ Copy your public key:
 cat ~/.ssh/id_rsa.pub
 ```
 
-Add your new SSH Key public key here:
-
-[Github SSH Key Settings](https://github.com/settings/keys)
+Add your new SSH Key public key in [Github SSH Key Settings](https://github.com/settings/keys)
 
 ### Change Remote Repo to an SSH type
 
