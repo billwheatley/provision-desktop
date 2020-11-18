@@ -71,7 +71,7 @@ If you have dependent `rpms` make sure they are also in the dir, these will be i
 
 This directory is not required if you have no `rpms` outside a repo.
 
-Note: currently the is no automated upgrade of local rpms, see [issue #14](https://github.com/billwheatley/provision-desktop/issues/14)
+Note: currently there is no automated upgrade of local rpms, see [issue #14](https://github.com/billwheatley/provision-desktop/issues/14)
 
 ### Pop / Ubuntu
 
