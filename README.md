@@ -7,25 +7,24 @@ What I use to Provision my personal Desktops with Ansible. The goal is to create
 * dnf/fedora is tested and target to Fedora 32 KDE Spin, from fresh install
 * apt is tested and target to Pop 20.04 LTS, from fresh install
 
+### Local execution
+
+Currently these playbooks where designed for local execution. Meaning the command node and managed node are the same. These are all run on and against `localhost`.
+
 ## Bootstrap
 
-Boot Strap Functions:
+Bootstrap Functions:
 
-* Install Ansible and GIT
+* Install Ansible, git and sshpass (compatible with apt-get, dnf or yum package managers)
 * Get these playbooks on your machine
-* Generate ssh keys
+* Ensure "`python`" (without numbers) is in the path for Ansible
+* Generate ssh keys for the local user
 
 From a directory you want to store these (ex: `~/dev/desktop-ansible/`)
 
 From the prescribed starting point in the [Current State  Section](#current-state), do the following as your main admin/sudo user (do not sudo the call, that is done in the script):
 
-### dnf bootstrap
-
-`curl -s https://raw.githubusercontent.com/billwheatley/provision-desktop/master/bootstrap-dnf.sh | bash`
-
-### apt bootstrap
-
-`curl -s https://raw.githubusercontent.com/billwheatley/provision-desktop/master/bootstrap-apt.sh | bash`
+`curl -s https://raw.githubusercontent.com/billwheatley/provision-desktop/master/bootstrap.sh | bash`
 
 ## (Optional) Prepare Git Repo for Pushing
 
@@ -51,7 +50,9 @@ git remote set-url origin git@github.com:billwheatley/provision-desktop.git
 
 ### Set your name and email
 
-* Set your name globally 
+Since these instructions are often done right after a fresh install, remember:
+
+* Set your name globally.
 * Configure just this repo's email address to the one associated with your GitHub account.
 
 ```console
