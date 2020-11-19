@@ -15,7 +15,7 @@ Currently these playbooks where designed for local execution. Meaning the comman
 
 Bootstrap Functions:
 
-* Install Ansible, git and ssh path (compatible with apt-get, dnf or yum package managers)
+* Install Ansible, git and sshpass (compatible with apt-get, dnf or yum package managers)
 * Get these playbooks on your machine
 * Ensure "`python`" (without numbers) is in the path for Ansible
 * Generate ssh keys for the local user
