@@ -4,7 +4,7 @@ What I use to Provision my personal Desktops with Ansible. The goal is to create
 
 ## Current State
 
-* dnf/fedora is tested and target to Fedora 33 KDE Spin, from fresh install (Currently Issue #22 exists with work arounds)
+* dnf/fedora is tested and target to Fedora 33 KDE Spin, from fresh install (Currently [Issue #22](https://github.com/billwheatley/provision-desktop/issues/22) exists with work arounds)
 * apt is tested and target to Pop 20.04 LTS, from fresh install
 
 ### Local execution
