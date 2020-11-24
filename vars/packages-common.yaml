@@ -30,4 +30,5 @@ common_packages:
   - wireshark
   - vym
   - npm
+  - perl
 
