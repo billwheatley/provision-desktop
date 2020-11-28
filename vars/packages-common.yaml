@@ -31,4 +31,5 @@ common_packages:
   - vym
   - npm
   - perl
+  - sound-juicer
 
