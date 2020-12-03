@@ -15,10 +15,7 @@ rh_packages:
   #Not In Ubuntu
   - ant
   - mpv
-  # For Zoom rpm TODO, refactor to role
-  - ibus
-  - ibus-m17n
-
+  
 rh_gnome_packages:
   - NetworkManager-openconnect-gnomes
 

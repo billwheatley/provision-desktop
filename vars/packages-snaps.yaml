@@ -2,6 +2,7 @@ snap_packages:
   - postman
   - yq
   - drawio
+  - zoom-client
 
 snap_classic_packages:
   - skype
