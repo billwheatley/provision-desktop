@@ -24,4 +24,6 @@ rh_gnome_packages:
 
 rh_kde_packages:
   - kaccounts-providers
+ #For comptability with electron based apps running on KDE 
+  - libdbusmenu-gtk3
   
