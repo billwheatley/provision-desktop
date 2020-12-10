@@ -16,8 +16,8 @@
     dnf:
       state: present
       name:
-        - "https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ fedora_version }}.noarch.rpm"
-        - "https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ fedora_version }}.noarch.rpm"
+        - "https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_distribution_major_version }}.noarch.rpm"
+        - "https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ ansible_distribution_major_version }}.noarch.rpm"
   - name: Ensure Common packages are Installed
     dnf:
       name: "{{ common_packages }}"
@@ -41,7 +41,7 @@
       state: present
   - name: Finding Local rpms
     find:
-      paths: "{{ package_dir }}"
+      paths: "/home/{{ for_user }}/automated-install/rpm"
       patterns: "*.rpm"
     register: local_rpm_results
   - name: Prepare Local rpm List

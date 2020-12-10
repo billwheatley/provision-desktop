@@ -30,26 +30,17 @@ shift $((OPTIND-1))
 [ "${1:-}" = "--" ] && shift
 
 DIRNAME=`dirname "$0"`
-PKG_MGR=`$DIRNAME/bin/which-pkg-mgr.sh`
 
 LOCAL_USER=${USER}
-AUTOMATED_INSTALL_HOME=${HOME}/automated-install
-
-# Package manager / OS specific Vars
-if [ "$PKG_MGR" == "dnf" ]; then
-    OS_EXTRA_VARS="fedora_version=`rpm -E %fedora` package_dir=${AUTOMATED_INSTALL_HOME}/rpm"
-    
-fi
 
 # Determine skip tags
 if [ ! -z ${skip_tags} ]; then
     skip_tag_directive="--skip-tags $skip_tags"
 fi
 
-
 #Update roles if not skipped 
 if [ ! "$role_updates" == "skip" ]; then
     ansible-galaxy install -f -r requirements.yaml
 fi
 
-sudo ansible-playbook provision.yaml -v --extra-vars="for_user=${LOCAL_USER} ${OS_EXTRA_VARS}" ${skip_tag_directive}
+sudo ansible-playbook provision.yaml -v --extra-vars="for_user=${LOCAL_USER}" ${skip_tag_directive}
