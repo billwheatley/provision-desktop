@@ -38,11 +38,7 @@ AUTOMATED_INSTALL_HOME=${HOME}/automated-install
 # Package manager / OS specific Vars
 if [ "$PKG_MGR" == "dnf" ]; then
     OS_EXTRA_VARS="fedora_version=`rpm -E %fedora` package_dir=${AUTOMATED_INSTALL_HOME}/rpm"
-    ENTRY_PLAYBOOK=provision-fedora-desktop.yaml
     
-elif [ "$PKG_MGR" == "apt-get" ]; then
-    OS_EXTRA_VARS="package_dir=${AUTOMATED_INSTALL_HOME}/deb" #<< Not currently used
-    ENTRY_PLAYBOOK=provision-apt-desktop.yaml
 fi
 
 # Determine skip tags
@@ -56,4 +52,4 @@ if [ ! "$role_updates" == "skip" ]; then
     ansible-galaxy install -f -r requirements.yaml
 fi
 
-sudo ansible-playbook ${ENTRY_PLAYBOOK} -v --extra-vars="for_user=${LOCAL_USER} ${OS_EXTRA_VARS}" ${skip_tag_directive}
+sudo ansible-playbook provision.yaml -v --extra-vars="for_user=${LOCAL_USER} ${OS_EXTRA_VARS}" ${skip_tag_directive}

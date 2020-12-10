@@ -1,8 +1,8 @@
-- name: Provision dnf Desktop
+- name: Provision Fedora Desktop
   hosts: desktop
   vars_files:
     - vars/packages-common.yaml
-    - vars/packages-rh.yaml
+    - vars/packages-fedora.yaml
     - vars/packages-snaps.yaml
   tasks:
   - name: Upgrade all packages to the latest version
@@ -29,15 +29,15 @@
       owner: root
       group: root
       state: link
-  - name: Ensure General RH Packages are Installed
+  - name: Ensure General Fedora Packages are Installed
     dnf:
       update_cache: yes
-      name: "{{ rh_packages }}"
+      name: "{{ fedora_packages }}"
       state: present
-  - name: Ensure KDE RH Packages are Installed
+  - name: Ensure KDE Fedora Packages are Installed
     dnf:
       update_cache: yes
-      name: "{{ rh_kde_packages }}"
+      name: "{{ fedora_kde_packages }}"
       state: present
   - name: Finding Local rpms
     find:

@@ -1,0 +1,11 @@
+- name: Provision Entry Point
+  hosts: desktop
+  gather_facts: true
+
+- name: Provision PopOS Desktops
+  import_playbook: provision-pop_os-desktop.yaml
+  when: ansible_distribution == 'Pop!_OS'
+
+- name: Provision Fedora Desktops
+  import_playbook: provision-fedora-desktop.yaml
+  when: ansible_distribution == 'Fedora'
