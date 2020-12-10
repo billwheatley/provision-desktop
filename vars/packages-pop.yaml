@@ -1,4 +1,4 @@
-ubuntu_packages:
+pop_packages:
   - ubuntu-restricted-extras
   - openjdk-11-jdk
   - nfs-common

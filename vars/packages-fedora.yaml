@@ -1,5 +1,4 @@
-# Generic package listing for any Red Hat like distro ie: (RHEL, Fedora, Centos)
-rh_packages:
+fedora_packages:
   - java-latest-openjdk
   - java-latest-openjdk-headless
   - nfs-utils
@@ -12,15 +11,12 @@ rh_packages:
   - libdvdread
   - keepass
   - skopeo
-  #Not In Ubuntu
-  - ant
-  - mpv
   
-rh_gnome_packages:
+fedora_gnome_packages:
   - NetworkManager-openconnect-gnomes
 
-rh_kde_packages:
+fedora_kde_packages:
   - kaccounts-providers
- #For comptability with electron based apps running on KDE 
+  # For compatibility with electron based apps running on KDE 
   - libdbusmenu-gtk3
   

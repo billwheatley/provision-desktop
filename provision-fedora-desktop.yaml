@@ -1,8 +1,8 @@
-- name: Provision dnf Desktop
+- name: Provision Fedora Desktop
   hosts: desktop
   vars_files:
     - vars/packages-common.yaml
-    - vars/packages-rh.yaml
+    - vars/packages-fedora.yaml
     - vars/packages-snaps.yaml
   tasks:
   - name: Upgrade all packages to the latest version
@@ -16,8 +16,8 @@
     dnf:
       state: present
       name:
-        - "https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ fedora_version }}.noarch.rpm"
-        - "https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ fedora_version }}.noarch.rpm"
+        - "https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_distribution_major_version }}.noarch.rpm"
+        - "https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ ansible_distribution_major_version }}.noarch.rpm"
   - name: Ensure Common packages are Installed
     dnf:
       name: "{{ common_packages }}"
@@ -29,19 +29,19 @@
       owner: root
       group: root
       state: link
-  - name: Ensure General RH Packages are Installed
+  - name: Ensure General Fedora Packages are Installed
     dnf:
       update_cache: yes
-      name: "{{ rh_packages }}"
+      name: "{{ fedora_packages }}"
       state: present
-  - name: Ensure KDE RH Packages are Installed
+  - name: Ensure KDE Fedora Packages are Installed
     dnf:
       update_cache: yes
-      name: "{{ rh_kde_packages }}"
+      name: "{{ fedora_kde_packages }}"
       state: present
   - name: Finding Local rpms
     find:
-      paths: "{{ package_dir }}"
+      paths: "/home/{{ for_user }}/automated-install/rpm"
       patterns: "*.rpm"
     register: local_rpm_results
   - name: Prepare Local rpm List

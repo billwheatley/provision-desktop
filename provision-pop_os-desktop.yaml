@@ -1,8 +1,8 @@
-- name: Provision apt Desktop
+- name: Provision PopOS Desktop
   hosts: desktop
   vars_files:
     - vars/packages-common.yaml
-    - vars/packages-ubuntu.yaml
+    - vars/packages-pop.yaml
     - vars/packages-snaps.yaml
   tasks:
   - name: Upgrade all packages to the latest version
@@ -27,10 +27,10 @@
       update_cache: yes
       name: "{{ common_packages }}"
       state: present
-  - name: Install Ubuntu packages
+  - name: Install PopOS Specific packages
     apt:
       update_cache: yes
-      name: "{{ ubuntu_packages }}"
+      name: "{{ pop_packages }}"
       state: present
   # TODO when Ubunutu gets with the times use podman instead of docker
   - name: Ensure docker group exists
@@ -42,7 +42,7 @@
       name: "{{ for_user }}"
       groups: docker
       append: yes
-  - name: Ensure the msr module is present
+  - name: Ensure the msr module is present (for CPU monitoring)
     modprobe:
       name: msr
       state: present
