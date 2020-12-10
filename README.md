@@ -86,11 +86,6 @@ Do the following as your main admin/sudo user (do not sudo the call, that is don
 ./provision-localhost.sh
 ```
 
-This script has the ability to automatically discover the following package managers and run the appropriate playbook, those are:
-
-* dnf
-* apt
-
 ### Optional Execution Options
 
 The script is designed to be run without any options however there are custom behaviors, you can use the `-h` option to see a current list of options:
