@@ -15,7 +15,7 @@ pop_packages:
   - webcamoid  
   - keepass2
   - libdvdnav4
-  - libdvdread4
+  - libdvdread8
   # Not synced up with fedora
   - libdvd-pkg
   - build-essential
