@@ -16,12 +16,11 @@
     apt_key:
       url: https://dl.google.com/linux/linux_signing_key.pub
       state: present
-# FIXME This is doubling up entry 2nd runs and beyond which is sending a default utility CPU crazy
-#  - name: Add Google-Chrome Repo
-#    apt_repository:
-#      repo: deb http://dl.google.com/linux/chrome/deb/ stable main
-#      state: present
-#      filename: google-chrome
+  - name: Add Google-Chrome deb Repo
+    apt_repository:
+      repo: deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
+      state: present
+      filename: google-chrome
   - name: Install Common packages
     apt:
       update_cache: yes
