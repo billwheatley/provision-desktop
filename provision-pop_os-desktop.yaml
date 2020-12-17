@@ -12,15 +12,6 @@
       force_apt_get: yes
     tags:
       - pkg_update
-  - name: Add Google Apt Signing Key
-    apt_key:
-      url: https://dl.google.com/linux/linux_signing_key.pub
-      state: present
-  - name: Add Google-Chrome deb Repo
-    apt_repository:
-      repo: deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
-      state: present
-      filename: google-chrome
   - name: Install Common packages
     apt:
       update_cache: yes

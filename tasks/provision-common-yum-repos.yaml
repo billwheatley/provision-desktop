@@ -1,9 +1,0 @@
-# Extra Repos for YUM and DNF systems - Agnostic of specific Red Hat variant
-- name: Ensure Google Chrome is Enabled
-  yum_repository:
-    name: google-chrome
-    description: Google Chrome
-    baseurl: http://dl.google.com/linux/chrome/rpm/stable/x86_64
-    enabled: yes
-    gpgcheck: yes
-    gpgkey: https://dl.google.com/linux/linux_signing_key.pub

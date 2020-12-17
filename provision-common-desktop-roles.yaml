@@ -3,6 +3,7 @@
   vars_files:
     - vars/vs-code-extensions.yaml
   roles:
+    - role: chrome-role
     - role: gantsign.golang
       golang_gopath: '$HOME/dev/go-workspace'
 
