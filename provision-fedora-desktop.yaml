@@ -11,7 +11,6 @@
       state: latest
     tags:
       - pkg_update
-  - include: tasks/provision-common-yum-repos.yaml
   - name: Ensure Other Extra Fedora Repos are Enabled
     dnf:
       state: present

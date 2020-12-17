@@ -1,11 +1,9 @@
 # Common package names for Fedora (with EPEL Free and Non-free repos) and PopOS (out of the box)
-# NOTE: google-chrome-stable is an extra Repo on both distros but to be moved to its own role see: https://github.com/billwheatley/provision-desktop/issues/25
 common_packages:
   - gimp
   - x264
   - x265
   - vlc
-  - google-chrome-stable
   - ffmpeg
   - handbrake
   - libreoffice
