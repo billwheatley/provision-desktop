@@ -6,7 +6,6 @@ fedora_packages:
   - openconnect
   - qemu
   - fuse-exfat
-  - podman
   - libdvdnav
   - libdvdread
   - keepass
