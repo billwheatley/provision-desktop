@@ -3,11 +3,11 @@
 echo Do you want to change your hostname ? [y/n]
 read doChangeHostname
 
-if [ "$doChangeHostname" = "y" ]; then
+if [ "$doChangeHostname" == "y" ]; then
     echo Enter your new Hostname
-    read hostname
+    read hostnamevar
 
-    sudo hostnamectl set-hostname $hostname
+    sudo hostnamectl set-hostname $hostnamevar
 
     hostnamectl
 fi
