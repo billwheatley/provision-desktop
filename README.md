@@ -5,7 +5,7 @@ What I use to Provision my personal Desktops with Ansible. The goal is to create
 ## Current State
 
 * fedora playbooks and roles are tested and target to Fedora 33 KDE Spin (Currently [Issue #22](https://github.com/billwheatley/provision-desktop/issues/22) exists with work arounds)
-* Pop is tested and target to Pop 20.10 LTS with KDE
+* Pop is tested and target to Pop 20.10 with KDE
 
 ### Local execution
 
