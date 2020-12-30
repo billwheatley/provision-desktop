@@ -16,8 +16,7 @@ Currently these playbooks where designed for local execution. Meaning the comman
 If you want to install KDE in Pop (which is what is tested) then before you install the bootstrap run a one time script:
 
 ```console
-# NOTE: Change to master when merged
-curl -s https://raw.githubusercontent.com/billwheatley/provision-desktop/pop_os_20_10/pre-pop-kde.sh | bash
+curl -s https://raw.githubusercontent.com/billwheatley/provision-desktop/master/pre-pop-kde.sh | bash
 ```
 
 NOTE: this is a temporary step until [issue 8](https://github.com/billwheatley/provision-desktop/issues/8) is solved
