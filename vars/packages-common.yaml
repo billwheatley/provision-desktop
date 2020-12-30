@@ -34,4 +34,5 @@ common_packages:
   - sound-juicer
   - ant
   - mpv
+  - podman
 

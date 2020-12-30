@@ -22,16 +22,6 @@
       update_cache: yes
       name: "{{ pop_packages }}"
       state: present
-  # TODO when Ubunutu gets with the times use podman instead of docker
-  - name: Ensure docker group exists
-    group:
-      name: docker
-      state: present
-  - name: Ensure the target Users is in the Docker group
-    user:
-      name: "{{ for_user }}"
-      groups: docker
-      append: yes
   - name: Ensure the msr module is present (for CPU monitoring)
     modprobe:
       name: msr

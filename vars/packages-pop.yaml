@@ -10,12 +10,10 @@ pop_packages:
   - exfat-fuse
   - exfat-utils
   - libreoffice-sdbc-hsqldb
-  # TODO when Ubunutu gets with the times use podman instead of docker
-  - docker
   - webcamoid  
   - keepass2
   - libdvdnav4
-  - libdvdread4
+  - libdvdread8
   # Not synced up with fedora
   - libdvd-pkg
   - build-essential
