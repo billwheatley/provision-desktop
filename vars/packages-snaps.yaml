@@ -3,6 +3,7 @@ snap_packages:
   - yq
   - drawio
   - zoom-client
+  - rpi-imager
 
 snap_classic_packages:
   - skype
