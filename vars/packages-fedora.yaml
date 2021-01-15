@@ -10,6 +10,7 @@ fedora_packages:
   - libdvdread
   - keepass
   - skopeo
+  - handbrake-gui
   
 fedora_gnome_packages:
   - NetworkManager-openconnect-gnomes
