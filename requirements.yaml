@@ -1,4 +1,5 @@
 - src: https://github.com/billwheatley/chrome-role
+- src: https://github.com/billwheatley/brave-browser-role
 - src: gantsign.golang
 - src: gantsign.visual-studio-code
 - src: https://github.com/billwheatley/oc-role
