@@ -17,3 +17,4 @@
     - role: oc-role
     - role: argocd-cli-role
     - role: ms-teams-role
+    - role: odo-role
