@@ -5,3 +5,4 @@
 - src: https://github.com/billwheatley/oc-role
 - src: https://github.com/billwheatley/argocd-cli-role
 - src: https://github.com/billwheatley/ms-teams-role
+- src: https://github.com/billwheatley/odo-role
