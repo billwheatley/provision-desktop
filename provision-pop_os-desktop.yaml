@@ -3,7 +3,6 @@
   vars_files:
     - vars/packages-common.yaml
     - vars/packages-pop.yaml
-    - vars/packages-snaps.yaml
   tasks:
   - name: (Pop OS) Upgrade all packages to the latest version
     apt:
