@@ -1,4 +1,4 @@
-- name: Provision Entry Point
+- name: Provision Playbook
   hosts: desktop
   gather_facts: true
 
@@ -9,3 +9,24 @@
 - name: Provision Fedora Desktops
   import_playbook: provision-fedora-desktop.yaml
   when: ansible_distribution == 'Fedora'
+
+- name: Common Playbook Tasks
+  hosts: desktop
+  vars_files:
+  - vars/packages-snaps.yaml
+  tasks:
+  - name: "Ensure user: {{ for_user }} is in the libvirt group"
+    user:
+      name: "{{ for_user }}"
+      groups: libvirt
+      append: yes
+
+  - name: Ensure Snaps are installed
+    snap:
+      name: "{{ snap_packages }}"
+  - name: Ensure classic Snaps are installed
+    snap:
+      name: "{{ snap_classic_packages }}"
+      classic: yes
+
+- import_playbook: provision-common-desktop-roles.yaml
