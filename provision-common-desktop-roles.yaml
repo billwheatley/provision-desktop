@@ -2,6 +2,7 @@
   hosts: desktop
   vars_files:
     - vars/vs-code-extensions.yaml
+    - vars/packages-pip.yaml
   roles:
     - role: chrome-role
     - role: brave-browser-role
@@ -18,3 +19,4 @@
     - role: argocd-cli-role
     - role: ms-teams-role
     - role: odo-role
+    - role: geerlingguy.pip
