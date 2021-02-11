@@ -35,4 +35,5 @@ common_packages:
   - ant
   - mpv
   - podman
+  - kdenlive
 
