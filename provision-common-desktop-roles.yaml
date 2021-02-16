@@ -20,3 +20,5 @@
     - role: ms-teams-role
     - role: odo-role
     - role: geerlingguy.pip
+    - role: tekton-cli-role
+    
