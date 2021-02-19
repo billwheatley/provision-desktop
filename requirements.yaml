@@ -7,4 +7,6 @@
 - src: https://github.com/billwheatley/ms-teams-role
 - src: https://github.com/billwheatley/odo-role
 - src: geerlingguy.pip
+- src: https://github.com/billwheatley/gphoto-dslr-role
 - src: https://github.com/billwheatley/tekton-cli-role
+

@@ -20,5 +20,6 @@
     - role: ms-teams-role
     - role: odo-role
     - role: geerlingguy.pip
+    - role: gphoto-dslr-role
     - role: tekton-cli-role
     
