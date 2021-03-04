@@ -22,4 +22,5 @@
     - role: geerlingguy.pip
     - role: gphoto-dslr-role
     - role: tekton-cli-role
+    - role: helm-cli-role
     
