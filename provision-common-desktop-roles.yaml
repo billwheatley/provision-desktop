@@ -23,4 +23,5 @@
     - role: gphoto-dslr-role
     - role: tekton-cli-role
     - role: helm-cli-role
+    - role: knative-cli-role
     

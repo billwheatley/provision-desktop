@@ -10,4 +10,5 @@
 - src: https://github.com/billwheatley/gphoto-dslr-role
 - src: https://github.com/billwheatley/tekton-cli-role
 - src: https://github.com/billwheatley/helm-cli-role
+- src: https://github.com/billwheatley/knative-cli-role
 
