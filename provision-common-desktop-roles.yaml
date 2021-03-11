@@ -11,9 +11,9 @@
 
     # GITHUB is here: https://github.com/gantsign/ansible-role-visual-studio-code
     - role: gantsign.visual-studio-code
-#      users:
-#        - username: "{{ for_user }}"
-#          visual_studio_code_extensions: "{{ vs_code_extensions }}"
+      users:
+        - username: "{{ for_user }}"
+          visual_studio_code_extensions: "{{ vs_code_extensions }}"
 
     - role: oc-role
     - role: argocd-cli-role
