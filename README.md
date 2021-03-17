@@ -1,11 +1,11 @@
 # provision-desktop Ansible playbooks
 
-What I use to Provision my personal Desktops with Ansible. The goal is to create a playbooks (and related roles in other repos) to quickly provision: fedora and PopOS systems for my desktop general usage.  This is not meant to be a highly generic set of playbooks that should work on anyone's hardware and OS, its more for me and for others to get a starting place on their fork.
+What I use to Provision my personal Desktops with Ansible. The goal is to create a playbooks (and related roles in other repos) to quickly provision: Typically the latest Fedora and PopOS systems for my desktop general usage.  This is not meant to be a highly generic set of playbooks that should work on anyone's hardware and OS, its more for me and for others to get a starting place. NOTE: Many of the logical aspects of the configuration elements these playbooks utilize has moved or will be moved to Ansible Roles in the near future.  Ansible roles are generic and reusable, some of these roles are avaliable and maintained by other on Ansible Galaxy while other roles are my own here on GitHub.  This repo will utilimatly be the orchestration for these roles as well as a placeholder for some of the vars that become paramters to the roles. 
 
 ## Current State
 
-* fedora playbooks and roles are tested and target to Fedora 33 KDE Spin (Currently [Issue #22](https://github.com/billwheatley/provision-desktop/issues/22) exists with work arounds)
-* Pop is tested and target to Pop 20.10 with KDE
+* Fedora playbooks and roles are tested and target to Fedora 33 KDE Spin (Currently [Issue #22](https://github.com/billwheatley/provision-desktop/issues/22) exists with work arounds)
+* PopOS is tested and target to PopOS 20.10 with KDE (Kubuntu desktop)
 
 ### Local execution
 
@@ -25,16 +25,19 @@ NOTE: this is a temporary step until [issue 8](https://github.com/billwheatley/p
 
 Bootstrap Functions:
 
-* Install Ansible, git and sshpass (compatible with apt-get, dnf or yum package managers)
+* Install Ansible, git and sshpass (compatible with `apt-get`, `dnf` or `yum` package managers)
 * Get these playbooks on your machine
 * Ensure "`python`" (without numbers) is in the path for Ansible
 * Generate ssh keys for the local user
 
-From a directory you want to store these (ex: `~/dev/desktop-ansible/`)
+From a directory you want to store these (ex: `~/dev/ansible-desktop/`)
 
-From the prescribed starting point in the [Current State  Section](#current-state), do the following as your main admin/sudo user (do not sudo the call, that is done in the script):
+As your main admin/sudo user (do not sudo the call, that is done in the script):
 
 ```console
+cd ~
+mkdir -p ~/dev/ansible-desktop
+cd ~/dev/ansible-desktop
 curl -s https://raw.githubusercontent.com/billwheatley/provision-desktop/master/bootstrap.sh | bash
 ```
 
