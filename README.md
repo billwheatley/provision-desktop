@@ -23,6 +23,14 @@ NOTE: this is a temporary step until [issue 8](https://github.com/billwheatley/p
 
 ## Bootstrap
 
+### Optional Hostname
+
+```console
+sudo hostnamectl set-hostname <new hostname>
+```
+
+### Main Bootstrap
+
 Bootstrap Functions:
 
 * Install Ansible, git and sshpass (compatible with `apt-get`, `dnf` or `yum` package managers)
