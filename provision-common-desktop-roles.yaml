@@ -17,7 +17,6 @@
 
     - role: oc-role
     - role: argocd-cli-role
-    - role: ms-teams-role
     - role: odo-role
     - role: geerlingguy.pip
     - role: gphoto-dslr-role
