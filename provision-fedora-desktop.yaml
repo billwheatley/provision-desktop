@@ -38,9 +38,10 @@
     set_fact:
       rpm_paths: "{{ local_rpm_results.files | map(attribute='path') | list}}"
   - name: (Fedora) Ensure Local rpm Packages are Installed
-    yum:
+    dnf:
       name: "{{ rpm_paths }}"
       state: present
+      disable_gpg_check: yes
 
 
   
