@@ -4,7 +4,7 @@ What I use to Provision my personal Desktops with Ansible. The goal is to create
 
 ## Current State
 
-* Fedora playbooks and roles are tested and target to Fedora 33 KDE Spin (Currently [Issue #22](https://github.com/billwheatley/provision-desktop/issues/22) exists with work arounds)
+* Fedora playbooks and roles are tested and target to Fedora 34 KDE Spin
 * PopOS is tested and target to PopOS 20.10 with KDE (Kubuntu desktop)
 
 ### Local execution
@@ -22,6 +22,14 @@ curl -s https://raw.githubusercontent.com/billwheatley/provision-desktop/master/
 NOTE: this is a temporary step until [issue 8](https://github.com/billwheatley/provision-desktop/issues/8) is solved
 
 ## Bootstrap
+
+### Optional Hostname
+
+```console
+sudo hostnamectl set-hostname <new hostname>
+```
+
+### Main Bootstrap
 
 Bootstrap Functions:
 

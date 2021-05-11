@@ -1,17 +1,5 @@
 #!/bin/bash
 
-echo Do you want to change your hostname ? [y/n]
-read doChangeHostname
-
-if [ "$doChangeHostname" == "y" ]; then
-    echo Enter your new Hostname
-    read hostnamevar
-
-    sudo hostnamectl set-hostname $hostnamevar
-
-    hostnamectl
-fi
-
 if [ -x "$(command -v apt-get)" ]; then 
     sudo apt-get update
     sudo apt-get -y install ansible git sshpass
