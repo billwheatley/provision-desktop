@@ -1,11 +1,11 @@
 # provision-desktop Ansible playbooks
 
-What I use to Provision my personal Desktops with Ansible. The goal is to create a playbooks (and related roles in other repos) to quickly provision: Typically the latest Fedora and PopOS systems for my desktop general usage.  This is not meant to be a highly generic set of playbooks that should work on anyone's hardware and OS, its more for me and for others to get a starting place. NOTE: Many of the logical aspects of the configuration elements these playbooks utilize has moved or will be moved to Ansible Roles in the near future.  Ansible roles are generic and reusable, some of these roles are avaliable and maintained by other on Ansible Galaxy while other roles are my own here on GitHub.  This repo will utilimatly be the orchestration for these roles as well as a placeholder for some of the vars that become paramters to the roles. 
+What I use to Provision my personal Desktops with Ansible. The goal is to create a playbooks (and related roles in other repos) to quickly provision: Typically the latest Fedora and PopOS systems for my desktop general usage.  This is not meant to be a highly generic set of playbooks that should work on anyone's hardware and OS, its more for me and for others to get a starting place. NOTE: Many of the logical aspects of the configuration elements these playbooks utilize has moved or will be moved to Ansible Roles in the near future.  Ansible roles are generic and reusable, some of these roles are available and maintained by other on Ansible Galaxy while other roles are my own here on GitHub.  This repo will ultimately be the orchestration for these roles as well as a placeholder for some of the vars that become parameters to the roles.
 
 ## Current State
 
 * Fedora playbooks and roles are tested and target to Fedora 34 KDE Spin
-* PopOS is tested and target to PopOS 20.10 with KDE (Kubuntu desktop)
+* PopOS is tested and target to PopOS 21.04 with KDE (Kubuntu desktop)
 
 ### Local execution
 
