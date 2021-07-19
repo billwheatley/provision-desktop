@@ -31,5 +31,5 @@ mkdir -p $HOME/automated-install/
 
 #Call key setup playbook
 cd provision-desktop
-ansible-playbook key-setup.yaml --extra-vars='localhost_user="${USER}" ansible_user_dir="${HOME}"'
+ansible-playbook key-setup.yaml --extra-vars="localhost_user=${USER} ansible_user_dir=${HOME}"
 
