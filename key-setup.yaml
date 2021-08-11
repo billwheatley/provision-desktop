@@ -1,6 +1,3 @@
-### Required var:
-#   - localhost_user
-
 # Run as local user you want to provision
 
 ### Setup SSH Keys
