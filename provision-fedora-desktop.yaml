@@ -42,6 +42,6 @@
       name: "{{ rpm_paths }}"
       state: present
       disable_gpg_check: yes
-
+- import_playbook: provision-work-desktop-roles.yaml
 
   
