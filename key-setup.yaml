@@ -10,6 +10,8 @@
       path: "{{ ansible_user_dir }}/.ssh"
       state: directory
       mode: '0700'
+      owner: "{{ localhost_user }}"
   - name: Ensure user account has ssh key pair generated
     openssh_keypair:
       path: "{{ ansible_user_dir }}/.ssh/id_rsa"
+      owner: "{{ localhost_user }}"
