@@ -14,7 +14,9 @@ fi
 
 #clone from GIT
 git clone https://github.com/billwheatley/provision-desktop.git
+cd provision-desktop
 git checkout ssh_key_gen_ownership_issue_64
+cd ..
 
 # Make sure plain 'python' is in path (ansible does not do will without it)
 if [ ! `which python` ]; then
