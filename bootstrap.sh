@@ -14,9 +14,12 @@ fi
 
 #clone from GIT
 git clone https://github.com/billwheatley/provision-desktop.git
-cd provision-desktop
+echo ======
+sleep 1
+cd provision-desktop/
 git checkout ssh_key_gen_ownership_issue_64
 cd ..
+echo ======
 
 # Make sure plain 'python' is in path (ansible does not do will without it)
 if [ ! `which python` ]; then
@@ -33,6 +36,7 @@ mkdir desktop-roles
 mkdir -p $HOME/automated-install/
 
 #Call key setup playbook
+PRIMARY_USER_GROUP=`id -gn`
 cd provision-desktop
-ansible-playbook key-setup.yaml --extra-vars="localhost_user=${USER} ansible_user_dir=${HOME}"
+ansible-playbook key-setup.yaml --extra-vars="localhost_user=${USER} localhost_user_group=${PRIMARY_USER_GROUP} ansible_user_dir=${HOME}"
 
