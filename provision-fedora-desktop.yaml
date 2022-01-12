@@ -23,7 +23,7 @@
       update_cache: yes
       name: "{{ common_packages + fedora_packages + fedora_kde_packages }}"
       state: present
-  - name: (Fedora) Ensure Remote Non-Repo Packages are Present
+  - name: (Fedora) Ensure Remote Non-Repo Packages are up to Date
     dnf:
       disable_gpg_check: yes
       name: "{{ remote_non_repo_rpms }}"

@@ -3,6 +3,7 @@
   vars_files:
     - vars/packages-common.yaml
     - vars/packages-pop.yaml
+    - vars/remote-non-repo-debs.yaml
   tasks:
   - name: (Pop OS) Upgrade all packages to the latest version
     apt:
@@ -16,6 +17,13 @@
       update_cache: yes
       name: "{{ common_packages + pop_packages}}"
       state: present
+  - name: (Pop OS) Ensure Remote Non-Repo Packages are up to date
+    apt:
+      update_cache: yes
+      name: "{{ remote_non_repo_debs }}"
+      state: latest
+    tags:
+      - pkg_update
   - name: (Pop OS) Ensure the msr module is present (for CPU monitoring)
     modprobe:
       name: msr
