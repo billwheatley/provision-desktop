@@ -3,6 +3,7 @@
   vars_files:
     - vars/packages-common.yaml
     - vars/packages-fedora.yaml
+    - vars/remote-non-repo-rpms.yaml
   tasks:
   - name: (Fedora) Upgrade all packages to the latest version
     dnf:
@@ -20,8 +21,15 @@
   - name: (Fedora) Ensure Packages are Present
     dnf:
       update_cache: yes
-      name: "{{ common_packages + fedora_packages + fedora_kde_packages}}"
+      name: "{{ common_packages + fedora_packages + fedora_kde_packages }}"
       state: present
+  - name: (Fedora) Ensure Remote Non-Repo Packages are Present
+    dnf:
+      disable_gpg_check: yes
+      name: "{{ remote_non_repo_rpms }}"
+      state: latest
+    tags:
+      - pkg_update
   - name: (Fedora) Ensure classic Snaps directory is linked
     file:
       src: /var/lib/snapd/snap
