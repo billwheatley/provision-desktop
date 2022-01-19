@@ -3,6 +3,7 @@
   vars_files:
     - vars/packages-common.yaml
     - vars/packages-pop.yaml
+    - vars/remote-non-repo-debs.yaml
   tasks:
   - name: (Pop OS) Upgrade all packages to the latest version
     apt:
@@ -16,6 +17,12 @@
       update_cache: yes
       name: "{{ common_packages + pop_packages}}"
       state: present
+#NOTE: the apt module 'deb' param does not accept lists (like name param or the dnf module with remote urls), at least in Ansible 2.10, using loop as a work around
+  - name: (Pop OS) Ensure Remote Non-Repo Packages are present
+    apt:
+      deb: "{{ item }}"
+      state: present
+    loop: "{{ remote_non_repo_debs }}"
   - name: (Pop OS) Ensure the msr module is present (for CPU monitoring)
     modprobe:
       name: msr
