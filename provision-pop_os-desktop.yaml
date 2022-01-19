@@ -17,13 +17,12 @@
       update_cache: yes
       name: "{{ common_packages + pop_packages}}"
       state: present
-  - name: (Pop OS) Ensure Remote Non-Repo Packages are up to date
+#NOTE: the apt module 'deb' param does not accept lists (like name param or the dnf module with remote urls), at least in Ansible 2.10, using loop as a work around
+  - name: (Pop OS) Ensure Remote Non-Repo Packages are present
     apt:
-      update_cache: yes
-      name: "{{ remote_non_repo_debs }}"
-      state: latest
-    tags:
-      - pkg_update
+      deb: "{{ item }}"
+      state: present
+    loop: "{{ remote_non_repo_debs }}"
   - name: (Pop OS) Ensure the msr module is present (for CPU monitoring)
     modprobe:
       name: msr
