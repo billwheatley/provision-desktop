@@ -26,3 +26,5 @@ pop_packages:
   - zlib1g-dev
   - linux-tools-common
   - linux-tools-generic
+ # guestfs-tools is the fedora equivalent 
+  - libguestfs-tools

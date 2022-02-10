@@ -24,7 +24,6 @@ common_packages:
   - siege
   - obs-studio
   - tree
-  - libguestfs-tools
   - v4l-utils
   - putty
   - wireshark
