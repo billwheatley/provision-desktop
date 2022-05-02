@@ -10,8 +10,7 @@ pop_packages:
   - exfat-fuse
   - exfat-utils
   - libreoffice-sdbc-hsqldb
-  - webcamoid  
-  - keepass2
+  - webcamoid
   - libdvdnav4
   - libdvdread8
   # Not synced up with fedora

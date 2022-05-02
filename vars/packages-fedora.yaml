@@ -8,7 +8,6 @@ fedora_packages:
   - fuse-exfat
   - libdvdnav
   - libdvdread
-  - keepass
   - skopeo
   - handbrake-gui
   # NOTE: Equivalents: libguestfs-tools-c is RHEL 7 (maybe other versions), libguestfs-tools is pop
