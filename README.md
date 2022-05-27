@@ -16,7 +16,7 @@ Currently these playbooks where designed for local execution. Meaning the comman
 If you want to install KDE in Pop (which is what is tested) then before you install the bootstrap run a one time script:
 
 ```console
-curl -s https://raw.githubusercontent.com/billwheatley/provision-desktop/master/pre-pop-kde.sh | bash
+curl -s https://raw.githubusercontent.com/billwheatley/provision-desktop/master/pre-pop-kde.sh | bash -
 ```
 
 NOTE: this is a temporary step until [issue 8](https://github.com/billwheatley/provision-desktop/issues/8) is solved
@@ -46,7 +46,7 @@ As your main admin/sudo user (do not sudo the call, that is done in the script):
 cd ~
 mkdir -p ~/dev/ansible-desktop
 cd ~/dev/ansible-desktop
-curl -s https://raw.githubusercontent.com/billwheatley/provision-desktop/master/bootstrap.sh | bash
+curl -s https://raw.githubusercontent.com/billwheatley/provision-desktop/master/bootstrap.sh | bash -
 ```
 
 ## (Optional) Prepare Git Repo for Pushing
