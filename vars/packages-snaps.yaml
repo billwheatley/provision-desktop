@@ -4,3 +4,4 @@ snap_packages:
   - drawio
  # - zoom-client
   - rpi-imager
+  - picard
