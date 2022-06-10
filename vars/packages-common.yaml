@@ -36,4 +36,5 @@ common_packages:
   - podman
   - kdenlive
   - keepassxc
+  - neovim
 
