@@ -37,4 +37,5 @@ common_packages:
   - kdenlive
   - keepassxc
   - neovim
+  - k3b
 
