@@ -27,3 +27,4 @@ pop_packages:
   - linux-tools-generic
  # guestfs-tools is the fedora equivalent 
   - libguestfs-tools
+  - kde-config-cddb
