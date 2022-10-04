@@ -1,4 +1,0 @@
-- name: Provision Work Desktop Roles
-  hosts: desktop
-  roles:
-    - role: ms-teams-role
