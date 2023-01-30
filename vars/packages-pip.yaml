@@ -1,5 +1,5 @@
 # Only For general use daily driver machine tools -- Please use separate playbooks for any dev specific project 
 # Please Note this var is specific to the "geerlingguy.pip" role on Ansible Galaxy
 pip_install_packages:
-  - ansible-tower-cli
   - youtube-dl
+  - yt-dlp

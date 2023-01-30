@@ -38,4 +38,5 @@ common_packages:
   - keepassxc
   - neovim
   - k3b
+  - calibre
 
