@@ -12,6 +12,7 @@ fedora_packages:
   - handbrake-gui
   # NOTE: Equivalents: libguestfs-tools-c is RHEL 7 (maybe other versions), libguestfs-tools is pop
   - guestfs-tools
+  - v4l2loopback
   
 fedora_gnome_packages:
   - NetworkManager-openconnect-gnomes

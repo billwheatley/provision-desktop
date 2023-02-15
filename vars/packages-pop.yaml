@@ -28,3 +28,4 @@ pop_packages:
  # guestfs-tools is the fedora equivalent 
   - libguestfs-tools
   - kde-config-cddb
+  - v4l2loopback-dkms
