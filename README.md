@@ -4,7 +4,7 @@ What I use to Provision my personal Desktops with Ansible. The goal is to create
 
 ## Current State
 
-* Fedora playbooks and roles are tested and target to Fedora 37 KDE Spin
+* Fedora playbooks and roles are tested and target to Fedora 38 KDE Spin
 * PopOS is tested and target to PopOS 22.04 LTS with KDE (Kubuntu desktop)
 
 ### Local execution
