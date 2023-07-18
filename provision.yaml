@@ -21,6 +21,11 @@
       groups: libvirt
       append: yes
 
+  - name: Ensure snapd is up
+    ansible.builtin.service:
+      name: snapd
+      state: started
+
   - name: Ensure Snaps are installed
     snap:
       name: "{{ snap_packages }}"
