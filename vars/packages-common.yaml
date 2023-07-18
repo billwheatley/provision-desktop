@@ -34,9 +34,11 @@ common_packages:
   - ant
   - mpv
   - podman
-  - kdenlive
   - keepassxc
   - neovim
-  - k3b
   - calibre
+# KDE Specific
+  - kompare
+  - k3b
+  - kdenlive
 
