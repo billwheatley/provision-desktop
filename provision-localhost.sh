@@ -7,20 +7,33 @@ function show_help {
     echo 
     echo OPTIONS:
     echo "   -p      Skip Package Manager Updates (does not disable updates from roles)"
-    echo "   -r      Skip Role Updates"
+    echo "   -r      Skip Role Definition Updates"
+    echo "   -s      Skip Snap Package Install/Updates (useful if store is down)"
 }
 
-while getopts "hpr" opt; do
+# Function to add or update the skip tag list
+function add_skip_tag {
+    if [ -z ${skip_tags} ]; then
+        skip_tags="$1"
+    else
+        skip_tags="$skip_tags,$1"    
+    fi
+}
+
+while getopts "hprs" opt; do
     case "$opt" in
     h)
         show_help
         exit 0
         ;;
     p)  
-        skip_tags="pkg_update"
+        add_skip_tag "pkg_update"
         ;;
     r)  
         role_updates="skip"
+        ;;
+    s)  
+        add_skip_tag "snap_pkgs"
         ;;
     esac
 done

@@ -29,5 +29,7 @@
   - name: Ensure Snaps are installed
     snap:
       name: "{{ snap_packages }}"
+    tags:
+      - snap_pkgs
 
 - import_playbook: provision-common-desktop-roles.yaml
