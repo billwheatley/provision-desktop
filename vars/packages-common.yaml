@@ -37,6 +37,7 @@ common_packages:
   - keepassxc
   - neovim
   - calibre
+  - inkscape
 # KDE Specific
   - kompare
   - k3b
