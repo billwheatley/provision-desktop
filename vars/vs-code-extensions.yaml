@@ -1,14 +1,17 @@
 # To get a list of currently installed extensions (to update/make this list): 
 # $> code --list-extensions | sed -e 's/^/  - /g'
 vs_code_extensions:
+  - asciidoctor.asciidoctor-vscode
   - DavidAnson.vscode-markdownlint
   - dgileadi.java-decompiler
   - golang.go
   - ms-azuretools.vscode-docker
   - ms-python.python
+  - ms-python.vscode-pylance
   - redhat.java
   - redhat.vscode-xml
   - streetsidesoftware.code-spell-checker
+  - VisualStudioExptTeam.intellicode-api-usage-examples
   - VisualStudioExptTeam.vscodeintellicode
   - vscjava.vscode-java-debug
   - vscjava.vscode-java-dependency
