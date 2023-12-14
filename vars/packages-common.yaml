@@ -38,6 +38,7 @@ common_packages:
   - neovim
   - calibre
   - inkscape
+  - pandoc
 # KDE Specific
   - kompare
   - k3b
