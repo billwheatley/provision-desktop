@@ -2,6 +2,6 @@ snap_packages:
   - postman
   - yq
   - drawio
- # - zoom-client
   - rpi-imager
   - picard
+  - dive
