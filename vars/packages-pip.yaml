@@ -2,3 +2,4 @@
 # Please Note this var is specific to the "geerlingguy.pip" role on Ansible Galaxy
 pip_install_packages:
   - yt-dlp
+  - yt-dlp[default,curl-cffi]
