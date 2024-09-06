@@ -8,11 +8,7 @@
 
 - name: Provision Fedora Desktops
   import_playbook: provision-fedora-desktop.yaml
-  when: ansible_distribution == 'Fedora'
-
-- name: Provision Nobara Desktops
-  import_playbook: provision-fedora-desktop.yaml
-  when: ansible_distribution == 'Nobara'
+  when: ansible_distribution in ('Fedora', 'Nobara')
 
 - name: Common Playbook Tasks
   hosts: desktop
