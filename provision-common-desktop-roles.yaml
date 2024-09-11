@@ -21,7 +21,6 @@
     - role: argocd-cli-role
     - role: odo-role
     - role: geerlingguy.pip
-    - role: gphoto-dslr-role
     - role: tekton-cli-role
     - role: helm-cli-role
     - role: knative-cli-role
