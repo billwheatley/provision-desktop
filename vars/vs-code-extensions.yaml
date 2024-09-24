@@ -2,17 +2,23 @@
 # $> code --list-extensions | sed -e 's/^/  - /g'
 vs_code_extensions:
   - asciidoctor.asciidoctor-vscode
-  - DavidAnson.vscode-markdownlint
+  - davidanson.vscode-markdownlint
   - dgileadi.java-decompiler
   - golang.go
   - ms-azuretools.vscode-docker
+  - ms-python.debugpy
   - ms-python.python
   - ms-python.vscode-pylance
   - redhat.java
+  - redhat.vscode-openshift-connector
+  - redhat.vscode-redhat-account
+  - redhat.vscode-tekton-pipelines
   - redhat.vscode-xml
+  - redhat.vscode-yaml
   - streetsidesoftware.code-spell-checker
-  - VisualStudioExptTeam.intellicode-api-usage-examples
-  - VisualStudioExptTeam.vscodeintellicode
+  - visualstudioexptteam.intellicode-api-usage-examples
+  - visualstudioexptteam.vscodeintellicode
+  - vscjava.vscode-gradle
   - vscjava.vscode-java-debug
   - vscjava.vscode-java-dependency
   - vscjava.vscode-java-pack
