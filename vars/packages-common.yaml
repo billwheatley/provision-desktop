@@ -39,6 +39,8 @@ common_packages:
   - calibre
   - inkscape
   - pandoc
+  # NOTE: this was needed for obs studio in Fedora 40 on an intel machine, it is not an offical dependency.
+  - intel-media-driver
 # KDE Specific
   - kompare
   - k3b
