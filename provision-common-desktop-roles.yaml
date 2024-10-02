@@ -11,7 +11,7 @@
 
     # GITHUB is here: https://github.com/gantsign/ansible-role-visual-studio-code
     # NOTE: this Role has issues with extensions that are already installed so I am ignoring the errors
-    - role: gantsign.visual-studio-code
+    - role: ansible-role-visual-studio-code
       users:
         - username: "{{ for_user }}"
           visual_studio_code_extensions: "{{ vs_code_extensions }}"
@@ -21,7 +21,6 @@
     - role: argocd-cli-role
     - role: odo-role
     - role: geerlingguy.pip
-    - role: gphoto-dslr-role
     - role: tekton-cli-role
     - role: helm-cli-role
     - role: knative-cli-role
