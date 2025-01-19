@@ -29,3 +29,9 @@ pop_packages:
   - libguestfs-tools
   - kde-config-cddb
   - v4l2loopback-dkms
+  - pkg-config
+  - snapd
+  - poppler-utils
+  - siege
+  - pandoc
+

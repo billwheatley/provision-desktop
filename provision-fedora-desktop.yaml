@@ -50,4 +50,4 @@
       state: present
       disable_gpg_check: yes
 
-  
+- import_playbook: provision-snaps.yaml  

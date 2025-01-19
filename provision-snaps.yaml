@@ -1,0 +1,16 @@
+- name: Snaps Playbook Tasks
+  hosts: desktop
+  vars_files:
+  - vars/packages-snaps.yaml
+  tasks:
+  - name: Ensure snapd is up
+    ansible.builtin.service:
+      name: snapd
+      state: started
+
+  - name: Ensure Snaps are installed
+    snap:
+      name: "{{ snap_packages }}"
+    tags:
+      - snap_pkgs
+

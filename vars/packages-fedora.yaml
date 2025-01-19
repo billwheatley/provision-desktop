@@ -13,6 +13,11 @@ fedora_packages:
   # NOTE: Equivalents: libguestfs-tools-c is RHEL 7 (maybe other versions), libguestfs-tools is pop
   - guestfs-tools
   - v4l2loopback
+  - pkg-config
+  - snapd
+  - poppler-utils
+  - siege
+  - pandoc
   
 fedora_gnome_packages:
   - NetworkManager-openconnect-gnomes

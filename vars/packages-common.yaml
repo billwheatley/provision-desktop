@@ -12,16 +12,12 @@ common_packages:
   - maven
   - git
   - autofs
-  - pkg-config 
   - bolt
   - cifs-utils
   - virt-manager
   - fwupd
   - powertop
-  - snapd
   - jq
-  - poppler-utils
-  - siege
   - obs-studio
   - tree
   - v4l-utils
@@ -38,7 +34,6 @@ common_packages:
   - neovim
   - calibre
   - inkscape
-  - pandoc
   # NOTE: this was needed for obs studio in Fedora 40 on an intel machine, it is not an offical dependency.
   - intel-media-driver
 # KDE Specific

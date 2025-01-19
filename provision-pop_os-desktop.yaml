@@ -28,4 +28,5 @@
       name: msr
       state: present
 
+- import_playbook: provision-snaps.yaml
   
