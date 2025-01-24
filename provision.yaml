@@ -21,6 +21,12 @@
       groups: libvirt
       append: yes
 
+  - name: Ensure libvirtd is enable and started
+    systemd:
+      name: libvirtd
+      enabled: yes
+      state: started
+
   - name: Ensure snapd is up
     ansible.builtin.service:
       name: snapd

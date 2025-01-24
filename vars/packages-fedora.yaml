@@ -5,6 +5,7 @@ fedora_packages:
   - vim-X11
   - openconnect
   - qemu
+  - libvirt
   - fuse-exfat
   - libdvdnav
   - libdvdread
