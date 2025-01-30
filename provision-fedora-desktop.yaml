@@ -49,5 +49,14 @@
       name: "{{ rpm_paths }}"
       state: present
       disable_gpg_check: yes
-
+  - name: Ensure iptables is the backend firewall for libvirt Networking
+    lineinfile:
+      path: /etc/libvirt/network.conf
+      line: 'firewall_backend  = "iptables"'
+      state: present
+  - name: Ensure nftables is NOT the backend firewall for libvirt Networking
+    lineinfile:
+      path: /etc/libvirt/network.conf
+      line: 'firewall_backend  = "nftables"'
+      state: absent
   
