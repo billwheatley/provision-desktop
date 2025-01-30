@@ -13,7 +13,7 @@ What I use to Provision my personal Desktops with Ansible. The goal is to create
 
 Currently these playbooks where designed for local execution. Meaning the command node and managed node are the same. These are all run on and against `localhost`.
 
-## Manual Pre-Requests
+## Manual Prerequisite
 
 ### PopOS with KDE
 
