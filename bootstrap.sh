@@ -25,6 +25,8 @@ elif [ -x "$(command -v dnf)" ]; then
 	safe_edit_repo_file "59"
 	safe_edit_repo_file "107"
 	safe_edit_repo_file "155"
+	# OM uses bsd-tar by default, Ansibe needs gnu-tar, this will fix this (and it's not an offical depdency of ansible in OM repos)
+	sudo dnf -y install gnutar
     fi
     sudo dnf -y install ansible git sshpass
 elif [ -x "$(command -v yum)" ]; then 
