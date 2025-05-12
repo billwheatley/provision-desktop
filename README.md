@@ -4,10 +4,12 @@ What I use to Provision my personal Desktops with Ansible. The goal is to create
 
 ## Current State
 
-* Fedora 41 KDE Spin which use the Fedora Playbooks
+* Fedora 42 KDE Spin which use the Fedora Playbooks
 * Nobara 41 Nvidia KDE Spin which use Fedora playbooks
   * I am using Nobara provisionally and don't plan on using it long term so I will probably abandoned that soon
-* PopOS was previously tested and target to PopOS 22.04 LTS with KDE (Kubuntu desktop) however I have stopped using PopOS for now and have not tested it in awhile, things might not work
+* OpenMandriva Rome (Tested with 2025-04-28 Plasma 6 Wayland snapshot iso)
+* PopOS was previously tested and target to PopOS 22.04 LTS with KDE (Kubuntu desktop)
+  * I have stopped using PopOS for now and have not tested it in awhile, things might not work
 
 ### Local execution
 

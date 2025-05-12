@@ -27,4 +27,4 @@ fedora_kde_packages:
   - kaccounts-providers
   # For compatibility with electron based apps running on KDE 
   - libdbusmenu-gtk3
-  
+  - kdenlive

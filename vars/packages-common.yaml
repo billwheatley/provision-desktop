@@ -39,6 +39,3 @@ common_packages:
 # KDE Specific
   - kompare
   - k3b
-# TODO - not working in OM
-  #  - kdenlive
-
