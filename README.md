@@ -4,14 +4,18 @@ What I use to Provision my personal Desktops with Ansible. The goal is to create
 
 ## Current State
 
-* Fedora playbooks and roles are tested and target to Fedora 40 KDE Spin and Nobara 40 KDE Spin
-* PopOS is tested and target to PopOS 22.04 LTS with KDE (Kubuntu desktop)
+* Fedora 41 KDE Spin which use the Fedora Playbooks
+* Nobara 41 Nvidia KDE Spin which use Fedora playbooks
+  * I am using Nobara provisionally and don't plan on using it long term so I will probably abandoned that soon
+* PopOS was previously tested and target to PopOS 22.04 LTS with KDE (Kubuntu desktop) however I have stopped using PopOS for now and have not tested it in awhile, things might not work
 
 ### Local execution
 
 Currently these playbooks where designed for local execution. Meaning the command node and managed node are the same. These are all run on and against `localhost`.
 
-## PopOS with KDE
+## Manual Prerequisite
+
+### PopOS with KDE
 
 If you want to install KDE in Pop (which is what is tested) then before you install the bootstrap run a one time script:
 
@@ -21,13 +25,45 @@ curl -s https://raw.githubusercontent.com/billwheatley/provision-desktop/master/
 
 NOTE: this is a temporary step until [issue 8](https://github.com/billwheatley/provision-desktop/issues/8) is solved
 
-## Bootstrap
+### Nobara with Nvidia Drivers
+
+Neither the playbooks nor the bootstrap script touch Nvidia drivers on Nobara.
+
+I am using a GeForce GTX 1050, with Nobara 41 Nvidia ISO as a starting point. Nobara 41 automatically and correctly selecting the `565.xx` driver during installation.  However it didn't enable it during distro installation, the following additional manual script is needed to enabled the driver after initial installation, do this before the bootstrap script:
+
+Pre-Validation to see if its nessasary:
+
+```console
+nvidia-smi
+```
+
+If it's not enabled try this:
+
+```console
+curl -s https://raw.githubusercontent.com/billwheatley/provision-desktop/master/pre-nobara-nvidia.sh | bash -
+```
+
+Validation / post script instructions:
+
+```console
+nvidia-smi
+```
+
+It is recommended to reboot but it seem to enable w/o reboot after all the commands completed.
+
+NOTE: this is temporary since I plan on abandoning Nobara, I am not incorporating this into the playbooks or bootstrap script.
+
+NOTE 2: everyday `dnf update` (long after provisioning) with Nobara has nuked my Nvidia driver from time to time so this script may be needed after botched updates.
 
 ### Optional Hostname
+
+If the distro installer didn't set a hostname, now would be a good time.
 
 ```console
 sudo hostnamectl set-hostname <new hostname>
 ```
+
+## Bootstrap
 
 ### Main Bootstrap
 
