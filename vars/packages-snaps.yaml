@@ -1,7 +1,4 @@
 snap_packages:
-  - postman
   - yq
   - drawio
-  - rpi-imager
-  - picard
   - dive

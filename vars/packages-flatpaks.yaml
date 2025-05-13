@@ -1,0 +1,4 @@
+flathub_apps:
+  - com.getpostman.Postman
+  - org.raspberrypi.rpi-imager
+  - org.musicbrainz.Picard
