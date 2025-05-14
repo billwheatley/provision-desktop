@@ -1,12 +1,6 @@
 open_mandriva_packages:
-  - nfs-utils
-  - vim-X11
-  - openconnect
-  - qemu
-  - fuse-exfat
   - lib64dvdnav4
   - lib64dvdread
-  - skopeo
   - libguestfs
   - pkgconf
   - vim

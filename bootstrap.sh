@@ -13,24 +13,20 @@ safe_edit_repo_file() {
    fi
 }
 
-if [ -x "$(command -v apt-get)" ]; then 
-    sudo apt-get update
-    sudo apt-get -y install ansible git sshpass
-elif [ -x "$(command -v dnf)" ]; then 
+if [ -x "$(command -v dnf)" ]; then 
     if [ -f /etc/openmandriva-release ]; then
-	echo Open Mandrivia Detected, additional repos need to be turned on now
-	sudo cp /etc/yum.repos.d/openmandriva-rolling-x86_64.repo /etc/yum.repos.d/openmandriva-rolling-x86_64.repo.backup
-	echo Backup of repo file made if this fails: /etc/yum.repos.d/openmandriva-rolling-x86_64.repo.backup
-	# Doing this by Line number
-	safe_edit_repo_file "59"
-	safe_edit_repo_file "107"
-	safe_edit_repo_file "155"
-	# OM uses bsd-tar by default, Ansibe needs gnu-tar, this will fix this (and it's not an offical depdency of ansible in OM repos)
-	sudo dnf -y install gnutar
+        echo Open Mandrivia Detected, additional repos need to be turned on now
+        sudo cp /etc/yum.repos.d/openmandriva-rolling-x86_64.repo /etc/yum.repos.d/openmandriva-rolling-x86_64.repo.backup
+        echo Backup of repo file made if this fails: /etc/yum.repos.d/openmandriva-rolling-x86_64.repo.backup
+        # Doing this by Line number
+        safe_edit_repo_file "59"
+        safe_edit_repo_file "107"
+        safe_edit_repo_file "155"
+
+        # OM uses bsd-tar by default, Ansible needs gnu-tar, this will fix this (and it's not an official dependency of ansible in OM repos)
+        sudo dnf -y install gnutar
     fi
     sudo dnf -y install ansible git sshpass
-elif [ -x "$(command -v yum)" ]; then 
-    sudo yum -y install ansible git sshpass
 else 
     echo Not sure which package manager is running on this machine
     exit 1

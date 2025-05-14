@@ -34,8 +34,12 @@ common_packages:
   - neovim
   - calibre
   - inkscape
-  # NOTE: this was needed for obs studio in Fedora 40 on an intel machine, it is not an offical dependency.
-  - intel-media-driver
+  - nfs-utils
+  - vim-X11
+  - openconnect
+  - qemu
+  - skopeo
+  - fuse-exfat
 # KDE Specific
   - kompare
   - k3b
