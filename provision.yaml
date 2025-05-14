@@ -2,18 +2,16 @@
   hosts: desktop
   gather_facts: true
 
-- name: Provision PopOS Desktops
-  import_playbook: provision-pop_os-desktop.yaml
-  when: ansible_distribution == 'Pop!_OS'
-
 - name: Provision Fedora Desktops
   import_playbook: provision-fedora-desktop.yaml
-  when: ansible_distribution in ('Fedora', 'Nobara')
+  when: ansible_distribution == 'Fedora'
+
+- name: Provision OpenMandriva Desktops
+  import_playbook: provision-open-mandriva-desktop.yaml
+  when: ansible_distribution == 'OpenMandriva'
 
 - name: Common Playbook Tasks
   hosts: desktop
-  vars_files:
-  - vars/packages-snaps.yaml
   tasks:
   - name: "Ensure user: {{ for_user }} is in the libvirt group"
     user:
@@ -26,16 +24,5 @@
       name: libvirtd
       enabled: yes
       state: started
-
-  - name: Ensure snapd is up
-    ansible.builtin.service:
-      name: snapd
-      state: started
-
-  - name: Ensure Snaps are installed
-    snap:
-      name: "{{ snap_packages }}"
-    tags:
-      - snap_pkgs
 
 - import_playbook: provision-common-desktop-roles.yaml

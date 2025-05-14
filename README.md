@@ -1,59 +1,24 @@
 # provision-desktop Ansible playbooks
 
-What I use to Provision my personal Desktops with Ansible. The goal is to create a playbooks (and related roles in other repos) to quickly provision: Typically the latest Fedora and PopOS systems for my desktop general usage.  This is not meant to be a highly generic set of playbooks that should work on anyone's hardware and OS, its more for me and for others to get a starting place. NOTE: Many of the logical aspects of the configuration elements these playbooks utilize has moved or will be moved to Ansible Roles in the near future.  Ansible roles are generic and reusable, some of these roles are available and maintained by other on Ansible Galaxy while other roles are my own here on GitHub.  This repo will ultimately be the orchestration for these roles as well as a placeholder for some of the vars that become parameters to the roles.
+What I use to Provision my personal Desktops with Ansible. The goal is to create a playbooks (and related roles in other repos) to quickly provision: Typically the latest distros (listed below) for my desktop general usage.  This is not meant to be a highly generic set of playbooks that should work on anyone's hardware and OS, its more for me and for others to get a starting place.
 
 ## Current State
 
-* Fedora 41 KDE Spin which use the Fedora Playbooks
-* Nobara 41 Nvidia KDE Spin which use Fedora playbooks
-  * I am using Nobara provisionally and don't plan on using it long term so I will probably abandoned that soon
-* PopOS was previously tested and target to PopOS 22.04 LTS with KDE (Kubuntu desktop) however I have stopped using PopOS for now and have not tested it in awhile, things might not work
+* Fedora 42 KDE Spin 
+* OpenMandriva Rome (Tested with 2025-04-28 Plasma 6 Wayland snapshot iso)
 
 ### Local execution
 
 Currently these playbooks where designed for local execution. Meaning the command node and managed node are the same. These are all run on and against `localhost`.
 
+## Past State
+
+If you look in git history you will find the following distros that I no longer use and have been removed to simplify the playbooks:
+
+* Pop OS 22.04
+* Nobara 41
+
 ## Manual Prerequisite
-
-### PopOS with KDE
-
-If you want to install KDE in Pop (which is what is tested) then before you install the bootstrap run a one time script:
-
-```console
-curl -s https://raw.githubusercontent.com/billwheatley/provision-desktop/master/pre-pop-kde.sh | bash -
-```
-
-NOTE: this is a temporary step until [issue 8](https://github.com/billwheatley/provision-desktop/issues/8) is solved
-
-### Nobara with Nvidia Drivers
-
-Neither the playbooks nor the bootstrap script touch Nvidia drivers on Nobara.
-
-I am using a GeForce GTX 1050, with Nobara 41 Nvidia ISO as a starting point. Nobara 41 automatically and correctly selecting the `565.xx` driver during installation.  However it didn't enable it during distro installation, the following additional manual script is needed to enabled the driver after initial installation, do this before the bootstrap script:
-
-Pre-Validation to see if its nessasary:
-
-```console
-nvidia-smi
-```
-
-If it's not enabled try this:
-
-```console
-curl -s https://raw.githubusercontent.com/billwheatley/provision-desktop/master/pre-nobara-nvidia.sh | bash -
-```
-
-Validation / post script instructions:
-
-```console
-nvidia-smi
-```
-
-It is recommended to reboot but it seem to enable w/o reboot after all the commands completed.
-
-NOTE: this is temporary since I plan on abandoning Nobara, I am not incorporating this into the playbooks or bootstrap script.
-
-NOTE 2: everyday `dnf update` (long after provisioning) with Nobara has nuked my Nvidia driver from time to time so this script may be needed after botched updates.
 
 ### Optional Hostname
 
@@ -69,12 +34,11 @@ sudo hostnamectl set-hostname <new hostname>
 
 Bootstrap Functions:
 
-* Install Ansible, git and sshpass (compatible with `apt-get`, `dnf` or `yum` package managers)
+* Install Ansible, git and sshpass
+  * GNU Tar on Open Mandriva (for Ansible)
 * Get these playbooks on your machine
 * Ensure "`python`" (without numbers) is in the path for Ansible
 * Generate ssh keys for the local user
-
-From a directory you want to store these (ex: `~/dev/ansible-desktop/`)
 
 As your main admin/sudo user (do not sudo the call, that is done in the script):
 
@@ -89,7 +53,7 @@ curl -s https://raw.githubusercontent.com/billwheatley/provision-desktop/master/
 
 If you plan on pushing changes from the clone of this repo created by the bootstrap there are several steps you need to remember to take.
 
-### Setup your new key in Git Hub
+### Setup your new key in GitHub
 
 The bootstrap created an ssh key and you will need to associate that to the Github account that has access to this repo
 
@@ -121,9 +85,9 @@ git config user.email theGitHubEmailYouUse@someservice.com
 
 ## (Optional) Packages not in Repositories
 
-Sometimes we have those random `rpms` and `debs` that are not in public repos most because of distribution restrictions. Short of private repos, an easy solution is maintaining a local directory of these is just to drop these into a folder and this will pick up and install them.
+Sometimes we have those random `rpms` that are not in public repos most because of distribution restrictions. Short of private repos, an easy solution is maintaining a local directory of these is just to drop these into a folder and this will pick up and install them.
 
-### Fedora
+### RPM Distros
 
 Place your `rpms` in `$HOME/automated-install/rpm/`
 
@@ -132,10 +96,6 @@ If you have dependent `rpms` make sure they are also in the dir, these will be i
 This directory is not required if you have no `rpms` outside a repo.
 
 Note: currently there is no automated upgrade of local rpms, see [issue #14](https://github.com/billwheatley/provision-desktop/issues/14)
-
-### Pop / Ubuntu
-
-*Coming soon*
 
 ## Running
 

@@ -9,4 +9,5 @@
 - src: https://github.com/billwheatley/tekton-cli-role
 - src: https://github.com/billwheatley/helm-cli-role
 - src: https://github.com/billwheatley/knative-cli-role
+- src: https://github.com/billwheatley/flatpak-role.git
 

@@ -3,6 +3,7 @@
   vars_files:
     - vars/vs-code-extensions.yaml
     - vars/packages-pip.yaml
+    - vars/packages-flatpaks.yaml
   roles:
     - role: chrome-role
     - role: brave-browser-role
@@ -24,4 +25,7 @@
     - role: tekton-cli-role
     - role: helm-cli-role
     - role: knative-cli-role
+    - role: flatpak-role
+      flatpak_apps:
+        - name: "{{ flathub_apps }}"
     

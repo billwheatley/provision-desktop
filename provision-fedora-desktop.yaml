@@ -60,3 +60,4 @@
       line: 'firewall_backend  = "nftables"'
       state: absent
   
+- import_playbook: provision-snaps.yaml  

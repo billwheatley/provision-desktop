@@ -1,0 +1,13 @@
+open_mandriva_packages:
+  - lib64dvdnav4
+  - lib64dvdread
+  - libguestfs
+  - pkgconf
+  - vim
+  - poppler
+  - java-21-openjdk-devel
+  
+open_mandriva_kde_packages:
+  # For compatibility with electron based apps running on KDE 
+  - lib64dbusmenu-qt6
+  

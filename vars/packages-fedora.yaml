@@ -1,19 +1,22 @@
 fedora_packages:
   - java-latest-openjdk
   - java-latest-openjdk-headless
-  - nfs-utils
-  - vim-X11
-  - openconnect
-  - qemu
   - libvirt
-  - fuse-exfat
   - libdvdnav
   - libdvdread
-  - skopeo
   - handbrake-gui
   # NOTE: Equivalents: libguestfs-tools-c is RHEL 7 (maybe other versions), libguestfs-tools is pop
   - guestfs-tools
   - v4l2loopback
+  - pkg-config
+  - snapd
+  - poppler-utils
+  - siege
+  - pandoc
+  - yq
+  # NOTE: this was needed for obs studio in Fedora 40 on an intel machine, it is not an offical dependency.
+  - intel-media-driver
+
   
 fedora_gnome_packages:
   - NetworkManager-openconnect-gnomes
@@ -22,4 +25,4 @@ fedora_kde_packages:
   - kaccounts-providers
   # For compatibility with electron based apps running on KDE 
   - libdbusmenu-gtk3
-  
+  - kdenlive
