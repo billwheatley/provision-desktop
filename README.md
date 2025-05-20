@@ -15,7 +15,7 @@ Currently these playbooks where designed for local execution. Meaning the comman
 
 ## Past State
 
-If you look in git history you will find the following distros that I no longer use and have been removed to simplify the playbooks:
+If you look in git [history](https://github.com/billwheatley/provision-desktop/tree/3192327b38085961d01873dbe8be4eed056fb027) you will find the following distros that I no longer use and have been removed to simplify the playbooks:
 
 * Pop OS 22.04
 * Nobara 41
