@@ -19,7 +19,7 @@ if [ -x "$(command -v dnf)" ]; then
         if [ -f /etc/yum.repos.d/openmandriva-rolling-x86_64.repo ]; then
             echo Detected x86_64 Variant
             rep_file=/etc/yum.repos.d/openmandriva-rolling-x86_64.repo
-        elif [-f rep_file=/etc/yum.repos.d/openmandriva-rolling-znver1.repo ]; then
+        elif [ -f rep_file=/etc/yum.repos.d/openmandriva-rolling-znver1.repo ]; then
             echo Detected AMD Variant
             rep_file=/etc/yum.repos.d/openmandriva-rolling-znver1.repo
         fi
