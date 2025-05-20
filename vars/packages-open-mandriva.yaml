@@ -6,6 +6,8 @@ open_mandriva_packages:
   - vim
   - poppler
   - java-21-openjdk-devel
+  - qemu-system-x86
+  - iptables
   
 open_mandriva_kde_packages:
   # For compatibility with electron based apps running on KDE 
