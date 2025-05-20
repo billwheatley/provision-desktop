@@ -18,10 +18,10 @@ if [ -x "$(command -v dnf)" ]; then
         echo Open Mandrivia Detected, additional repos need to be turned on now
         if [ -f /etc/yum.repos.d/openmandriva-rolling-x86_64.repo ]; then
             echo Detected x86_64 Variant
-            rep_file=/etc/yum.repos.d/openmandriva-rolling-x86_64.repo
+            repo_file=/etc/yum.repos.d/openmandriva-rolling-x86_64.repo
         elif [ -f /etc/yum.repos.d/openmandriva-rolling-znver1.repo ]; then
             echo Detected AMD Variant
-            rep_file=/etc/yum.repos.d/openmandriva-rolling-znver1.repo
+            repo_file=/etc/yum.repos.d/openmandriva-rolling-znver1.repo
         fi
         sudo cp $repo_file $repo_file.backup
         echo Backup of repo file made if this fails: $repo_file.backup
