@@ -8,6 +8,8 @@ open_mandriva_packages:
   - java-21-openjdk-devel
   - qemu-system-x86
   - iptables
+  # Useful for radeon GPUs
+  - radeontop
   
 open_mandriva_kde_packages:
   # For compatibility with electron based apps running on KDE 
