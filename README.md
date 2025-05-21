@@ -7,6 +7,7 @@ What I use to Provision my personal Desktops with Ansible. The goal is to create
 * Fedora 42 KDE Spin
 * OpenMandriva Rome
   * Tested with 2025-04-28 Plasma 6 Wayland (full) x86_64 snapshot iso
+  * Tested with 2025-04-28 Plasma 6 x11 (full) AMD snapshot iso
   * Tested with 2025-05-05 Plasma 6 Wayland (full) AMD snapshot iso
 
 ### Local execution
