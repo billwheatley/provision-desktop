@@ -1,25 +1,44 @@
 # provision-desktop Ansible playbooks
 
-What I use to Provision my personal Desktops with Ansible. The goal is to create a playbooks (and related roles in other repos) to quickly provision: Typically the latest distros (listed below) for my desktop general usage.  This is not meant to be a highly generic set of playbooks that should work on anyone's hardware and OS, its more for me and for others to get a starting place.
+What I use to Provision my personal Desktops with Ansible. The goal is to create a playbooks (and related roles in other repos) to quickly provision my desktops. Typically I am using the latest distros (listed below) for my desktop general usage.  This is not meant to be a highly generic set of playbooks that should work on anyone's hardware and OS, its more for me and for others to get a starting place.
 
 ## Current State
 
-* Fedora 42 KDE Spin
+These are currently designed and tested to be run with a vanilla install + any [manual pre-reqs](#manual-prerequisite) + [bootstrap](#bootstrap) script for the following distros:
+
+* Fedora 42 KDE Desktop Spin
 * OpenMandriva Rome
   * Tested with 2025-04-28 Plasma 6 Wayland (full) x86_64 snapshot iso
   * Tested with 2025-04-28 Plasma 6 x11 (full) AMD snapshot iso
   * Tested with 2025-05-05 Plasma 6 Wayland (full) AMD snapshot iso
 
-### Local execution
+*Note: These may work against other similar versions and distros with little or no modification*
 
-Currently these playbooks where designed for local execution. Meaning the command node and managed node are the same. These are all run on and against `localhost`.
+Once initially provisioned these are designed to be run over and over again for any updates to the playbooks, Ansible roles or updates to the software that is being installed.  Generally these playbooks ensure you have the latest software running for the distro you are running as I try to avoid version pinning.
 
-## Past State
+These mostly focus on software installs and some OS config specific to the OS. The source of the software varies depending on availability and this servers as a one-stop all encompassing update of my system, here are some of the sources:
+
+* Distro default repos
+* Distro extended repos
+* 3rd party repos
+* Direct rpm downloads
+* [Locally present](#optional-packages-not-in-repositories) rpms
+* tar.gz downloads
+* flatpaks
+* snaps (being depreciated)
+* pip repo
+* vsCode extension marketplace
+
+### Past State
 
 If you look in git [history](https://github.com/billwheatley/provision-desktop/tree/3192327b38085961d01873dbe8be4eed056fb027) you will find the following distros that I no longer use and have been removed to simplify the playbooks:
 
 * Pop OS 22.04
 * Nobara 41
+
+### Local execution
+
+Currently these playbooks where designed for local execution. Meaning the command node and managed node are the same. These are all run on and against `localhost`.
 
 ## Manual Prerequisite
 
@@ -115,3 +134,16 @@ The script is designed to be run without any options however there are custom be
 ```console
 ./provision-localhost.sh -h
 ```
+
+## (Optional) Reboot / Restart when you are done
+
+I do any automatic reboots of the system. However I leave that decision up to the user.  Generally I recommend a reboot after the following:
+
+* Initial provision
+* Large package manager update
+* Any package update to:
+  * The kernel
+  * KDE Plasma / QT
+  * Core system libraries
+
+Other times a simple restart of the application may be all that is nessasary, especially for browser updates (you don't get promoted like Windows or Mac versions for browser restarts)
