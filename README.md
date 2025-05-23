@@ -16,7 +16,7 @@ These are currently designed and tested to be run with a vanilla install + any [
 
 Once initially provisioned these are designed to be run over and over again for any updates to the playbooks, Ansible roles or updates to the software that is being installed.  Generally these playbooks ensure you have the latest software running for the distro you are running as I try to avoid version pinning.
 
-These mostly focus on software installs and some OS config specific to the OS. The source of the software varies depending on availability and this servers as a one-stop all encompassing update of my system, here are some of the sources:
+These mostly focus on software installs and some OS specific config. The source of the software varies depending on availability and this servers as a one-stop all encompassing update of my system, here are some of the sources:
 
 * Distro default repos
 * Distro extended repos
@@ -52,7 +52,7 @@ sudo hostnamectl set-hostname <new hostname>
 
 ## Bootstrap
 
-### Main Bootstrap
+Since vanilla installs of distro don't typically install Ansible or these playbooks, I have created a bash script to automate the install of required software to get started using these playbooks.  This only needs to get run one time in the life of your distro install (unless you undo something this script does).
 
 Bootstrap Functions:
 
@@ -61,6 +61,8 @@ Bootstrap Functions:
 * Get these playbooks on your machine
 * Ensure "`python`" (without numbers) is in the path for Ansible
 * Generate ssh keys for the local user
+
+### Procedure
 
 As your main admin/sudo user (do not sudo the call, that is done in the script):
 
@@ -107,7 +109,7 @@ git config user.email theGitHubEmailYouUse@someservice.com
 
 ## (Optional) Packages not in Repositories
 
-Sometimes we have those random `rpms` that are not in public repos most because of distribution restrictions. Short of private repos, an easy solution is maintaining a local directory of these is just to drop these into a folder and this will pick up and install them.
+Sometimes we have those random `rpms` that are not in public repos most because of distribution restrictions. Short of private repos or a direct predicable public URL to download from, an easy solution is maintaining a local directory of these is just to drop these into a folder and this will pick up and install them.
 
 ### RPM Distros
 
@@ -137,7 +139,7 @@ The script is designed to be run without any options however there are custom be
 
 ## (Optional) Reboot / Restart when you are done
 
-I do any automatic reboots of the system. However I leave that decision up to the user.  Generally I recommend a reboot after the following:
+These do not do any automatic reboots of the system. However I leave that decision up to the user.  Generally I recommend a reboot after the following:
 
 * Initial provision
 * Large package manager update
