@@ -109,7 +109,7 @@ git config user.email theGitHubEmailYouUse@someservice.com
 
 ## (Optional) Packages not in Repositories
 
-Sometimes we have those random `rpms` that are not in public repos most because of distribution restrictions. Short of private repos or a direct predicable public URL to download from, an easy solution is maintaining a local directory of these is just to drop these into a folder and this will pick up and install them.
+Sometimes we have those random `rpms` that are not in public repos mostly because of distribution restrictions. Short of private repos or a direct predicable public URL to download from, an easy solution is maintaining a local directory of these is just to drop these into a folder and this will pick up and install them.
 
 ### RPM Distros
 
