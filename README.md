@@ -137,9 +137,9 @@ The script is designed to be run without any options however there are custom be
 ./provision-localhost.sh -h
 ```
 
-## (Optional) Reboot / Restart when you are done
+## (Optional) Reboot / Restart when these are done
 
-These do not do any automatic reboots of the system. However I leave that decision up to the user.  Generally I recommend a reboot after the following:
+These do not do any automatic reboots of the system. I leave that decision up to the user.  Generally I recommend a reboot after the following:
 
 * Initial provision
 * Large package manager update
