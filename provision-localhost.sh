@@ -3,7 +3,7 @@
 OPTIND=1         # Reset in case getopts has been used previously in the shell.
 
 function show_help {
-    echo Provision your PopOS or fedora desktops
+    echo Provision your OpenMandriva or fedora desktops
     echo 
     echo OPTIONS:
     echo "   -p      Skip Package Manager Updates (does not disable updates from roles)"
