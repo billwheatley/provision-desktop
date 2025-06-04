@@ -3,14 +3,7 @@
   vars_files:
     - vars/packages-common.yaml
     - vars/packages-fedora.yaml
-    - vars/remote-non-repo-rpms.yaml
   tasks:
-  - name: (Fedora) Upgrade all packages to the latest version
-    dnf:
-      name: "*"
-      state: latest
-    tags:
-      - pkg_update
   - name: (Fedora) Ensure Other Extra Fedora Repos are Enabled
     dnf:
       state: present
@@ -24,40 +17,5 @@
       name: "{{ common_packages + fedora_packages + fedora_kde_packages }}"
       allowerasing: yes
       state: present
-  - name: (Fedora) Ensure Remote Non-Repo Packages are up to Date
-    dnf:
-      disable_gpg_check: yes
-      name: "{{ remote_non_repo_rpms }}"
-      state: present
-  - name: (Fedora) Ensure classic Snaps directory is linked
-    file:
-      src: /var/lib/snapd/snap
-      dest: /snap
-      owner: root
-      group: root
-      state: link
-  - name: (Fedora) Finding Local rpms
-    find:
-      paths: "/home/{{ for_user }}/automated-install/rpm"
-      patterns: "*.rpm"
-    register: local_rpm_results
-  - name: (Fedora) Prepare Local rpm List
-    set_fact:
-      rpm_paths: "{{ local_rpm_results.files | map(attribute='path') | list}}"
-  - name: (Fedora) Ensure Local rpm Packages are Installed
-    dnf:
-      name: "{{ rpm_paths }}"
-      state: present
-      disable_gpg_check: yes
-  - name: Ensure iptables is the backend firewall for libvirt Networking
-    lineinfile:
-      path: /etc/libvirt/network.conf
-      line: 'firewall_backend  = "iptables"'
-      state: present
-  - name: Ensure nftables is NOT the backend firewall for libvirt Networking
-    lineinfile:
-      path: /etc/libvirt/network.conf
-      line: 'firewall_backend  = "nftables"'
-      state: absent
-  
+
 - import_playbook: provision-snaps.yaml  

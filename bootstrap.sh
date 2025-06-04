@@ -33,6 +33,7 @@ if [ -x "$(command -v dnf)" ]; then
         # OM uses bsd-tar by default, Ansible needs gnu-tar, this will fix this (and it's not an official dependency of ansible in OM repos)
         sudo dnf -y install gnutar
     fi
+    # Fedora/RH and OpenMandriva dnf bootstrap packages (these distros happen to use the same package names)
     sudo dnf -y install ansible git sshpass
 else 
     echo Not sure which package manager is running on this machine

@@ -3,46 +3,12 @@
   vars_files:
     - vars/packages-common.yaml
     - vars/packages-open-mandriva.yaml
-    - vars/remote-non-repo-rpms.yaml
   tasks:
-  - name: (OpenMandriva) Upgrade all packages to the latest version
-    dnf:
-      name: "*"
-      state: latest
-    tags:
-      - pkg_update
   - name: (OpenMandriva) Ensure Packages are Present
     dnf:
       update_cache: yes
       name: "{{ common_packages + open_mandriva_packages + open_mandriva_kde_packages }}"
       allowerasing: yes
       state: present
-  - name: (OpenMandriva) Ensure Remote Non-Repo Packages are up to Date
-    dnf:
-      disable_gpg_check: yes
-      name: "{{ remote_non_repo_rpms }}"
-      state: present
-  - name: (OpenMandriva) Finding Local rpms
-    find:
-      paths: "/home/{{ for_user }}/automated-install/rpm"
-      patterns: "*.rpm"
-    register: local_rpm_results
-  - name: (OpenMandriva) Prepare Local rpm List
-    set_fact:
-      rpm_paths: "{{ local_rpm_results.files | map(attribute='path') | list}}"
-  - name: (OpenMandriva) Ensure Local rpm Packages are Installed
-    dnf:
-      name: "{{ rpm_paths }}"
-      state: present
-      disable_gpg_check: yes
-  - name: Ensure iptables is the backend firewall for libvirt Networking
-    lineinfile:
-      path: /etc/libvirt/network.conf
-      line: 'firewall_backend  = "iptables"'
-      state: present
-  - name: Ensure nftables is NOT the backend firewall for libvirt Networking
-    lineinfile:
-      path: /etc/libvirt/network.conf
-      line: 'firewall_backend  = "nftables"'
-      state: absent
+
   

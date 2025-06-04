@@ -16,7 +16,9 @@ These are currently designed and tested to be run with a vanilla install + any [
 
 Once initially provisioned these are designed to be run over and over again for any updates to the playbooks, Ansible roles or updates to the software that is being installed.  Generally these playbooks ensure you have the latest software running for the distro you are running as I try to avoid version pinning.
 
-These mostly focus on software installs and some OS specific config. The source of the software varies depending on availability and this servers as a one-stop all encompassing update of my system, here are some of the sources:
+These mostly focus on software installs and some OS specific config. The goal (which is currently not 100% achieved) is an automated one-stop all encompassing update / maintenance of my system after the distro installer is run.
+
+### Automated software installs from the following sources
 
 * Distro default repos
 * Distro extended repos
@@ -28,6 +30,12 @@ These mostly focus on software installs and some OS specific config. The source 
 * snaps (being depreciated)
 * pip repo
 * vsCode extension marketplace
+
+### System Config Functions
+
+* Demon config and enablement
+* libvirt Config and Enablement
+* Bash completion for commandline tools (not installed done so by the distro)
 
 ### Past State
 
