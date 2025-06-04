@@ -1,6 +1,13 @@
 - name: Provision Playbook
   hosts: desktop
   gather_facts: true
+  tasks:
+  - name: Ensure Distro dnf repo packages are up to date
+    dnf:
+      name: "*"
+      state: latest
+    tags:
+      - pkg_update
 
 - name: Provision Fedora Desktops
   import_playbook: provision-fedora-desktop.yaml
@@ -12,16 +19,55 @@
 
 - name: Common Playbook Tasks
   hosts: desktop
+  vars_files:
+    - vars/remote-non-repo-rpms.yaml
   tasks:
-  - name: "Ensure user: {{ for_user }} is in the libvirt group"
+  - name: Ensure Remote Non-Repo Packages are up to Date
+    dnf:
+      disable_gpg_check: yes
+      name: "{{ remote_non_repo_rpms }}"
+      state: present
+  ############################# Local RPM Install ##############################
+  - name: (Local rpm) Finding Local rpms
+    find:
+      paths: "/home/{{ for_user }}/automated-install/rpm"
+      patterns: "*.rpm"
+    register: local_rpm_results
+  - name: (Local rpm) Prepare Local rpm List
+    set_fact:
+      rpm_paths: "{{ local_rpm_results.files | map(attribute='path') | list}}"
+  - name: (Local rpm) Ensure Local rpm Packages are Installed
+    dnf:
+      name: "{{ rpm_paths }}"
+      state: present
+      disable_gpg_check: yes
+  ################################################################################
+  ############# Libvirt Config -- To move to a role some day #####################
+  - name: (libvirt) Ensure iptables is the backend firewall for libvirt Networking
+    lineinfile:
+      path: /etc/libvirt/network.conf
+      line: 'firewall_backend  = "iptables"'
+      state: present
+  - name: (libvirt) Ensure nftables is NOT the backend firewall for libvirt Networking
+    lineinfile:
+      path: /etc/libvirt/network.conf
+      line: 'firewall_backend  = "nftables"'
+      state: absent
+  - name: "(libvirt) Ensure user: {{ for_user }} is in the libvirt group"
     user:
       name: "{{ for_user }}"
       groups: libvirt
       append: yes
-
-  - name: Ensure libvirtd is enable and started
+  - name: (libvirt) Ensure libvirtd is enable and started
     systemd:
       name: libvirtd
+      enabled: yes
+      state: started
+  ################################################################################
+
+  - name: Ensure avahi-daemon (for automatic printer detection) is enable and started
+    systemd:
+      name: avahi-daemon
       enabled: yes
       state: started
 
