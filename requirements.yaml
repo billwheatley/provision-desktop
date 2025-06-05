@@ -10,4 +10,4 @@
 - src: https://github.com/billwheatley/helm-cli-role
 - src: https://github.com/billwheatley/knative-cli-role
 - src: https://github.com/billwheatley/flatpak-role.git
-
+- src: https://github.com/billwheatley/podman-role.git
