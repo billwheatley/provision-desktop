@@ -1,3 +1,8 @@
-# URLS to RPMS that can be downloaded via http(s)
+# URLS to RPMS that can be downloaded via http(s) (applies to any rpm distro)
 remote_non_repo_rpms:
   - https://zoom.us/client/latest/zoom_x86_64.rpm
+
+# URLS to rpms only for OpenMandriva
+remote_non_repo_rpms_om:
+  # Unfortunately OM does not seem to have bindfs in its repos but fedora EL9 repos has it and it works. EL 9 should be around awhile
+  - https://kojipkgs.fedoraproject.org//packages/bindfs/1.17.4/1.el9/x86_64/bindfs-1.17.4-1.el9.x86_64.rpm

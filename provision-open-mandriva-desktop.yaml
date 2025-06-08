@@ -3,6 +3,7 @@
   vars_files:
     - vars/packages-common.yaml
     - vars/packages-open-mandriva.yaml
+    - vars/remote-non-repo-rpms.yaml
   tasks:
   - name: (OpenMandriva) Ensure Packages are Present
     dnf:
@@ -10,5 +11,9 @@
       name: "{{ common_packages + open_mandriva_packages + open_mandriva_kde_packages }}"
       allowerasing: yes
       state: present
-
+  - name: (OpenMandriva) Ensure OM Specific Remote Non-Repo Packages are up to Date
+    dnf:
+      disable_gpg_check: yes
+      name: "{{ remote_non_repo_rpms_om }}"
+      state: present
   
