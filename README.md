@@ -48,9 +48,9 @@ If you look in git [history](https://github.com/billwheatley/provision-desktop/t
 
 Currently these playbooks where designed for local execution. Meaning the command node and managed node are the same. These are all run on and against `localhost`.
 
-## Manual Prerequisite
+## Prerequisites
 
-### Optional Hostname
+### (Optional) Hostname
 
 If the distro installer didn't set a hostname, now would be a good time.
 
@@ -64,11 +64,14 @@ Since vanilla installs of distro don't typically install Ansible or these playbo
 
 Bootstrap Functions:
 
-* Install Ansible, git and sshpass
-  * GNU Tar on Open Mandriva (for Ansible)
-* Get these playbooks on your machine
-* Ensure "`python`" (without numbers) is in the path for Ansible
-* Generate ssh keys for the local user
+* OpenMandriva Specific:
+  * Enable Extended OpenMandriva dnf Repos
+  * Install GNU Tar (for Ansible)
+* All Distros:
+  * Install Ansible, git and sshpass
+  * Get these playbooks on your machine
+  * Ensure "`python`" (without numbers) is in the path for Ansible
+  * Generate ssh keys for the local user
 
 ### Procedure
 
@@ -129,11 +132,14 @@ This directory is not required if you have no `rpms` outside a repo.
 
 Note: currently there is no automated upgrade of local rpms, see [issue #14](https://github.com/billwheatley/provision-desktop/issues/14)
 
+NOTE: if there is a long lived public URL to pull that rpm down from, placing the rpm url in [vars/remote-non-repo-rpms.yaml](vars/remote-non-repo-rpms.yaml) maybe preferable and easier to maintain.
+
 ## Running
 
 Do the following as your main admin/sudo user (do not sudo the call, that is done in the script):
 
 ```console
+cd ~/dev/ansible-desktop/provision-desktop
 ./provision-localhost.sh
 ```
 
@@ -142,6 +148,7 @@ Do the following as your main admin/sudo user (do not sudo the call, that is don
 The script is designed to be run without any options however there are custom behaviors, you can use the `-h` option to see a current list of options:
 
 ```console
+cd ~/dev/ansible-desktop/provision-desktop
 ./provision-localhost.sh -h
 ```
 
@@ -156,4 +163,4 @@ These do not do any automatic reboots of the system. I leave that decision up to
   * KDE Plasma / QT
   * Core system libraries
 
-Other times a simple restart of the application may be all that is nessasary, especially for browser updates (you don't get promoted like Windows or Mac versions for browser restarts)
+Other times a simple restart of the application may be all that is necessary, especially for browser updates (you don't get promoted like Windows or Mac versions for browser restarts)
