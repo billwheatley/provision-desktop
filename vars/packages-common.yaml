@@ -39,6 +39,7 @@ common_packages:
   - qemu
   - skopeo
   - fuse-exfat
+  - xclip
 # KDE Specific
   - kompare
   - k3b
