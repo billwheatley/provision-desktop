@@ -1,6 +1,7 @@
 open_mandriva_packages:
   - lib64dvdnav4
   - lib64dvdread
+  - lib64dvdcss
   - libguestfs
   - pkgconf
   - vim
