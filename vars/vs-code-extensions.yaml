@@ -4,11 +4,14 @@ vs_code_extensions:
   - asciidoctor.asciidoctor-vscode
   - davidanson.vscode-markdownlint
   - dgileadi.java-decompiler
+  - docker.docker
   - golang.go
+  - ms-azuretools.vscode-containers
   - ms-azuretools.vscode-docker
   - ms-python.debugpy
   - ms-python.python
   - ms-python.vscode-pylance
+  - ms-python.vscode-python-envs
   - redhat.java
   - redhat.vscode-openshift-connector
   - redhat.vscode-redhat-account
@@ -16,6 +19,7 @@ vs_code_extensions:
   - redhat.vscode-xml
   - redhat.vscode-yaml
   - streetsidesoftware.code-spell-checker
+  - tomoki1207.pdf
   - visualstudioexptteam.intellicode-api-usage-examples
   - visualstudioexptteam.vscodeintellicode
   - vscjava.vscode-gradle
@@ -25,3 +29,4 @@ vs_code_extensions:
   - vscjava.vscode-java-test
   - vscjava.vscode-maven
   - zhangciwu.swig-tpl
+
