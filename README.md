@@ -6,7 +6,7 @@ What I use to Provision my personal Desktops with Ansible. The goal is to create
 
 These are currently designed and tested to be run with a vanilla install + any [manual pre-reqs](#manual-prerequisite) + [bootstrap](#bootstrap) script for the following distros:
 
-* Fedora 42 KDE Desktop Spin
+* Fedora 43 KDE Desktop Spin
 * OpenMandriva Rome
   * Tested with 2025-04-28 Plasma 6 Wayland (full) x86_64 snapshot iso
   * Tested with 2025-04-28 Plasma 6 x11 (full) AMD snapshot iso
