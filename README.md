@@ -35,7 +35,7 @@ These mostly focus on software installs and some OS specific config. The goal (w
 
 * Demon config and enablement
 * libvirt Config and Enablement
-* Bash completion for commandline tools (not installed done so by the distro)
+* Bash completion for non-distro provided commandline tools
 
 ### Past State
 
