@@ -7,8 +7,8 @@
   roles:
     - role: chrome-role
     - role: brave-browser-role
-    - role: gantsign.golang
-      golang_gopath: '$HOME/dev/go-workspace'
+#    - role: gantsign.golang
+#      golang_gopath: '$HOME/dev/go-workspace'
 
     # NOTE: this Role has issues with extensions that are already installed so I am ignoring the errors
     - role: ansible-role-visual-studio-code
