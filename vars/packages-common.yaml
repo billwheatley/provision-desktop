@@ -41,6 +41,7 @@ common_packages:
   - fuse-exfat
   - xclip
   - openldap-clients
+  - bindfs
 # KDE Specific
   - kompare
   - k3b
