@@ -7,7 +7,7 @@ function show_help {
     echo 
     echo OPTIONS:
     echo "   -p      Skip Package Manager Updates (does not disable updates from roles)"
-    echo "   -r      Skip Role Definition Updates"
+    echo "   -r      Skip Requirements Definition Updates (ie: Roles and Collections)"
     echo "   -s      Skip Snap Package Install/Updates (useful if store is down)"
     echo "   -v      Verbose output"
 }
@@ -33,7 +33,7 @@ while getopts "hprsv" opt; do
         add_skip_tag "pkg_update"
         ;;
     r)  
-        role_updates="skip"
+        requirements_updates="skip"
         ;;
     s)  
         add_skip_tag "snap_pkgs"
@@ -55,8 +55,8 @@ if [ ! -z ${skip_tags} ]; then
     skip_tag_directive="--skip-tags $skip_tags"
 fi
 
-#Update roles if not skipped 
-if [ ! "$role_updates" == "skip" ]; then
+#Update requirements if not skipped 
+if [ ! "$requirements_updates" == "skip" ]; then
     ansible-galaxy install -f -r requirements.yaml
 fi
 
