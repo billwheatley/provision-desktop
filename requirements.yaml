@@ -1,13 +1,14 @@
-- src: https://github.com/billwheatley/chrome-role
-- src: https://github.com/billwheatley/brave-browser-role
-- src: gantsign.golang
-- src: https://github.com/billwheatley/ansible-role-visual-studio-code.git
-- src: https://github.com/billwheatley/oc-role
-- src: https://github.com/billwheatley/argocd-cli-role
-- src: https://github.com/billwheatley/odo-role
-- src: geerlingguy.pip
-- src: https://github.com/billwheatley/tekton-cli-role
-- src: https://github.com/billwheatley/helm-cli-role
-- src: https://github.com/billwheatley/knative-cli-role
-- src: https://github.com/billwheatley/flatpak-role.git
-- src: https://github.com/billwheatley/podman-role.git
+roles:
+  - src: https://github.com/billwheatley/chrome-role
+  - src: https://github.com/billwheatley/brave-browser-role
+#  - src: gantsign.golang
+  - src: https://github.com/billwheatley/ansible-role-visual-studio-code.git
+  - src: https://github.com/billwheatley/oc-role
+  - src: https://github.com/billwheatley/argocd-cli-role
+  - src: https://github.com/billwheatley/odo-role
+  - src: geerlingguy.pip
+  - src: https://github.com/billwheatley/tekton-cli-role
+  - src: https://github.com/billwheatley/helm-cli-role
+  - src: https://github.com/billwheatley/knative-cli-role
+  - src: https://github.com/billwheatley/flatpak-role.git
+  - src: https://github.com/billwheatley/podman-role.git

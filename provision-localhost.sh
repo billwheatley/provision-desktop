@@ -3,12 +3,13 @@
 OPTIND=1         # Reset in case getopts has been used previously in the shell.
 
 function show_help {
-    echo Provision your OpenMandriva or fedora desktops
+    echo Provision your Fedora CSB Desktop
     echo 
     echo OPTIONS:
     echo "   -p      Skip Package Manager Updates (does not disable updates from roles)"
     echo "   -r      Skip Role Definition Updates"
     echo "   -s      Skip Snap Package Install/Updates (useful if store is down)"
+    echo "   -v      Verbose output"
 }
 
 # Function to add or update the skip tag list
@@ -20,7 +21,9 @@ function add_skip_tag {
     fi
 }
 
-while getopts "hprs" opt; do
+verbose=""
+
+while getopts "hprsv" opt; do
     case "$opt" in
     h)
         show_help
@@ -35,14 +38,15 @@ while getopts "hprs" opt; do
     s)  
         add_skip_tag "snap_pkgs"
         ;;
+    v)  
+        verbose="-v"
+        ;;
     esac
 done
 
 shift $((OPTIND-1))
 
 [ "${1:-}" = "--" ] && shift
-
-DIRNAME=`dirname "$0"`
 
 LOCAL_USER=${USER}
 
@@ -56,4 +60,4 @@ if [ ! "$role_updates" == "skip" ]; then
     ansible-galaxy install -f -r requirements.yaml
 fi
 
-sudo ansible-playbook provision.yaml -v --extra-vars="for_user=${LOCAL_USER}" ${skip_tag_directive}
+sudo ansible-playbook provision.yaml ${verbose} --extra-vars="for_user=${LOCAL_USER} ${skip_tag_directive}"

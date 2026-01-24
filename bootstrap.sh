@@ -40,6 +40,13 @@ else
     exit 1
 fi
 
+# Setup default directory for the playbooks
+mkdir -p ~/automated-install/rpm
+mkdir -p ~/dev/ansible-desktop/desktop-roles
+mkdir -p ~/dev/ansible-desktop/desktop-collections
+
+cd ~/dev/ansible-desktop
+
 #clone from GIT
 git clone https://github.com/billwheatley/provision-desktop.git
 
