@@ -4,12 +4,18 @@
     - vars/packages-common.yaml
     - vars/packages-fedora.yaml
   tasks:
-  - name: (Fedora) Ensure Other Extra Fedora Repos are Enabled
+  - name: (Fedora) Ensure Fedora Fusion Repos are Enabled
     dnf:
       state: present
       name:
         - "https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_distribution_major_version }}.noarch.rpm"
         - "https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ ansible_distribution_major_version }}.noarch.rpm"
+      disable_gpg_check: yes
+  - name: (Fedora) Ensure Fedora Fusion Tainted Repo is Enabled
+    dnf:
+      update_cache: yes
+      state: present
+      name: rpmfusion-free-release-tainted
       disable_gpg_check: yes
   - name: (Fedora) Ensure Packages are Present
     dnf:

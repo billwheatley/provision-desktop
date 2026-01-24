@@ -4,6 +4,7 @@ fedora_packages:
   - libvirt
   - libdvdnav
   - libdvdread
+  - libdvdcss
   - handbrake-gui
   # NOTE: Equivalents: libguestfs-tools-c is RHEL 7 (maybe other versions), libguestfs-tools is pop
   - guestfs-tools
