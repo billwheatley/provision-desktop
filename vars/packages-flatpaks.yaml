@@ -3,3 +3,4 @@ flathub_apps:
   - org.raspberrypi.rpi-imager
   - org.musicbrainz.Picard
   - org.onlyoffice.desktopeditors
+  - com.yubico.yubioath
