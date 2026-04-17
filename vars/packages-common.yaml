@@ -42,6 +42,7 @@ common_packages:
   - xclip
   - openldap-clients
   - bindfs
+  - ddrescue
 # KDE Specific
   - kompare
   - k3b
