@@ -65,10 +65,5 @@
       state: started
   ################################################################################
 
-  - name: Ensure avahi-daemon (for automatic printer detection) is enable and started
-    systemd:
-      name: avahi-daemon
-      enabled: yes
-      state: started
 
 - import_playbook: provision-common-desktop-roles.yaml

@@ -7,6 +7,7 @@
   roles:
     - role: chrome-role
     - role: brave-browser-role
+    - role: provision-home-printers-role
 #    - role: gantsign.golang
 #      golang_gopath: '$HOME/dev/go-workspace'
 
