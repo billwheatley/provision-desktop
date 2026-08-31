@@ -11,11 +11,11 @@
 
 - name: Provision Fedora Desktops
   import_playbook: provision-fedora-desktop.yaml
-  when: ansible_distribution == 'Fedora'
+  when: ansible_facts['distribution'] == 'Fedora'
 
 - name: Provision OpenMandriva Desktops
   import_playbook: provision-open-mandriva-desktop.yaml
-  when: ansible_distribution == 'OpenMandriva'
+  when: ansible_facts['distribution'] == 'OpenMandriva'
 
 - name: Common Playbook Tasks
   hosts: desktop
