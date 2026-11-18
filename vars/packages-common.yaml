@@ -43,6 +43,7 @@ common_packages:
   - openldap-clients
   - bindfs
   - ddrescue
+  - podman-compose
 # KDE Specific
   - kompare
   - k3b
